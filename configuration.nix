@@ -38,11 +38,12 @@
   services.xserver = {
     enable = true;
     layout = "de";
-    windowManager.qtile.enable = true;
+    windowManager.i3.enable = true;
   };
   services.displayManager.ly.enable = true;
 
-
+  programs.fish.enable = true;
+  users.users.ax.shell = pkgs.fish;
 
   
 
