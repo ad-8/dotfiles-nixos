@@ -61,6 +61,8 @@
 
   # after enabling this, *reboot* is needed, then its availably in *ly*
   programs.sway.enable = true;
+  # thanks https://mynixos.com/nixpkgs/option/programs.light.enable 
+  programs.light.enable = true;
 
 
   # Configure keymap in X11
@@ -98,7 +100,7 @@
   users.users.ax = {
     isNormalUser = true;
     description = "ax";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "video" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
       alacritty
