@@ -5,6 +5,7 @@
   home.username = "ax";
   home.homeDirectory = "/home/ax";
   home.packages = with pkgs; [
+    # rofi 2.0 (which has wayland support) not in 25.05 repo
     arandr
     bat 
     delta
@@ -16,9 +17,11 @@
     ncdu
     rbenv
     ripgrep
+    rofi-wayland
     starship
     stow
     tokei
+    waybar
     zoxide
   ];
 

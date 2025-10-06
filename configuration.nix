@@ -49,6 +49,8 @@
       programs.fish.enable = true;
       users.users.ax.shell = pkgs.fish;
 
+      # after enabling this, *reboot* is needed, then its availably in *ly*
+      programs.sway.enable = true;
 
 
       # Configure keymap in X11
