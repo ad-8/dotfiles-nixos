@@ -43,6 +43,8 @@
         name = "arthur";
         email = "arthurfleck8@proton.me";
       };
+      # -------------------------------------------------------------------------------------------------------------------------
+      # settings for [delta](https://github.com/dandavison/delta)
       core = {
         editor = "vim";
         pager = "delta";
@@ -52,7 +54,7 @@
       };
       delta = {
         navigate = true;    # use n and N to move between diff sections
-        light = false;      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS     terminal)
+        light = false;      # set to true if you're in a terminal w/ a light background color 
         line-numbers = true;
         side-by-side = true;
       };
@@ -62,6 +64,7 @@
       diff = {
         colorMoved = "default";
       };
+      # -------------------------------------------------------------------------------------------------------------------------
       credential."https://github.com".helper = "!${pkgs.gh}/bin/gh auth git-credential";
       credential."https://gist.github.com".helper = "!${pkgs.gh}/bin/gh auth git-credential";
     };
