@@ -6,15 +6,18 @@
   home.homeDirectory = "/home/ax";
   home.packages = with pkgs; [
     # rofi 2.0 (which has wayland support) not in 25.05 repo
+    alacritty
     arandr
     bat 
     delta
     emacs
     eza
+    fastfetch
     gh
     htop
     i3status-rust
     ncdu
+    nnn
     rbenv
     ripgrep
     rofi-wayland
