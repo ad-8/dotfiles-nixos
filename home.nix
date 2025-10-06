@@ -8,13 +8,14 @@
   programs.bash = {
 	  enable = true;
     shellAliases = {
-      btw = "echo Keira is so fucking hot! Sydney too :D";
+      btw = "echo 'home-manager seems to be working :)'";
     };
   };
 
   #  home.file.".config/qtile".source = ./config/qtile;
 
   home.packages = with pkgs; [
+    bat 
     emacs
 	  ripgrep
     stow
