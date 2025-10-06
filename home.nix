@@ -13,6 +13,8 @@
     emacs
     eza
     fastfetch
+    fd
+    fzf
     gh
     htop
     i3status-rust
