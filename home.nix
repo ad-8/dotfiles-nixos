@@ -37,9 +37,12 @@
     i3status-rust
 
     # other
-    psmisc # provides killall
-    tealdeer
     libqalculate # provides qalc for rofi-calc
+    tealdeer
+
+    # essentials
+    file
+    psmisc # provides killall
 
     # coding
     babashka
