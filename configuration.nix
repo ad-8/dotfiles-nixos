@@ -121,6 +121,7 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+  programs.java.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

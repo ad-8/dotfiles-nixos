@@ -26,6 +26,11 @@
     waybar
     zoxide
 
+    # gui
+    brave
+    gimp3
+    libreoffice-still
+    vscodium
 
     # legacy
     arandr
@@ -34,9 +39,13 @@
     # other
     psmisc # provides killall
     tealdeer
+    libqalculate # provides qalc for rofi-calc
 
     # coding
     babashka
+    clojure
+    leiningen
+    # clojure-lsp # needed?
 
 
     # window manager tools
