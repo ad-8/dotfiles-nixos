@@ -19,9 +19,9 @@ or the *switch* to apply them
 
 # Links
 ## Installation with flake and home-manager
-https://www.youtube.com/watch?v=2QjzI5dXwDY
+https://www.youtube.com/watch?v=2QjzI5dXwDY  
 https://www.tonybtw.com/tutorial/nixos-from-scratch/
 ## Others
-https://search.nixos.org/packages
+https://search.nixos.org/packages  
 https://mynixos.com/
 
