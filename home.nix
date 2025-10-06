@@ -43,6 +43,9 @@
         name = "arthur";
         email = "arthurfleck8@proton.me";
       };
+      init = {
+        defaultBranch = "main";
+      };
       # -------------------------------------------------------------------------------------------------------------------------
       # settings for [delta](https://github.com/dandavison/delta)
       core = {
