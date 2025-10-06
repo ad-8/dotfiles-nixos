@@ -40,7 +40,11 @@
         layout = "de";
         windowManager.i3.enable = true;
       };
+
+      # systemd services
       services.displayManager.ly.enable = true;
+      # check like on regular distro: systemctl status spice-vdagentd 
+      services.spice-vdagentd.enable = true;
 
       programs.fish.enable = true;
       users.users.ax.shell = pkgs.fish;
@@ -85,6 +89,7 @@
           git
           nnn
           fastfetch
+          spice-vdagent
         ];
 
         fonts.packages = with pkgs; [
