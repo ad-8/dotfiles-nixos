@@ -15,19 +15,20 @@
   #  home.file.".config/qtile".source = ./config/qtile;
 
   home.packages = with pkgs; [
+    arandr
     bat 
-    emacs
-	  ripgrep
-    stow
     delta
-    tokei
-	  starship
-    rbenv
-    zoxide
-    ncdu
+    emacs
+    eza
     htop
     i3status-rust
-    arandr
+    ncdu
+    rbenv
+    ripgrep
+    starship
+    stow
+    tokei
+    zoxide
   ];
 
   # this overwrote the config in ~/dotfiles (make backup like we set it up though)
