@@ -37,8 +37,10 @@
       # Enable the X11 windowing system.
       services.xserver = {
         enable = true;
-        layout = "de";
         windowManager.i3.enable = true;
+        xkb = {
+          layout = "de";
+        };
       };
 
       # systemd services
