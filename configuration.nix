@@ -123,6 +123,12 @@
     programs.firefox.enable = true;
     programs.java.enable = true;
 
+    # thunar via https://wiki.nixos.org/wiki/Thunar
+    programs.thunar.enable = true;
+    programs.xfconf.enable = true;
+    services.gvfs.enable = true; # Mount, trash, and other functionalities
+    services.tumbler.enable = true; # Thumbnail support for images
+
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
 
