@@ -28,6 +28,23 @@
     tokei
     waybar
     zoxide
+
+    # other
+    psmisc # provides killall
+    tealdeer
+
+    # coding
+    babashka
+
+
+    # window manager tools
+    ddcutil
+    gammastep
+    # light # enabled in configuration.nix
+    sct
+    wmenu
+    libnotify
+    dunst
   ];
 
   programs.bash = {
