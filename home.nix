@@ -20,6 +20,7 @@
     delta
     emacs
     eza
+    gh
     htop
     i3status-rust
     ncdu
