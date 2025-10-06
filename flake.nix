@@ -13,16 +13,16 @@
 		nixosConfigurations.nix-vm = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [	
-				./configuration.nix
-				home-manager.nixosModules.home-manager
-				{
-					home-manager = {
-						useGlobalPkgs = true;
-						useUserPackages = true;
-						users.ax = import ./home.nix;
-						backupFileExtension = "bak";
-					};
-				}
+			./configuration.nix
+			home-manager.nixosModules.home-manager
+			{
+				home-manager = {
+					useGlobalPkgs = true;
+					useUserPackages = true;
+					users.ax = import ./home.nix;
+					backupFileExtension = "bak";
+				};
+			}
 			];
 		};
 	};
