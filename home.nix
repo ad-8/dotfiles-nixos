@@ -7,7 +7,6 @@
   home.packages = with pkgs; [
     # rofi 2.0 (which has wayland support) not in 25.05 repo
     alacritty
-    arandr
     bat 
     delta
     emacs
@@ -17,17 +16,20 @@
     fzf
     gh
     htop
-    i3status-rust
     ncdu
     nnn
     rbenv
     ripgrep
-    rofi-wayland
     starship
     stow
     tokei
     waybar
     zoxide
+
+
+    # legacy
+    arandr
+    i3status-rust
 
     # other
     psmisc # provides killall
@@ -38,13 +40,15 @@
 
 
     # window manager tools
-    ddcutil
-    gammastep
     # light # enabled in configuration.nix
+    ddcutil
+    dunst
+    gammastep
+    libnotify
+    rofi-calc
+    rofi-wayland
     sct
     wmenu
-    libnotify
-    dunst
   ];
 
   programs.bash = {
