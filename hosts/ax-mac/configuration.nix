@@ -29,6 +29,8 @@
       Defaults timestamp_timeout=30
     '';
 
+    security.polkit.enable = true;
+
     # Set your time zone.
     time.timeZone = "Europe/Berlin";
 
