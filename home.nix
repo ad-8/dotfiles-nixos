@@ -31,6 +31,8 @@
     gimp3
     libreoffice-still
     vscodium
+    kdePackages.dolphin
+    kdePackages.okular
 
     # legacy
     arandr
@@ -109,5 +111,27 @@
   # this overwrote the config in ~/dotfiles (made backup like we set it up though)
   # -> using existing config file for now 
   # programs.fish.enable = true;
+
+  # finally ... at least gtk works now
+  # https://hoverbear.org/blog/declarative-gnome-configuration-in-nixos/ (relevant section towards the bottom)
+  gtk = {
+    enable = true;
+    # works -> see e.g. thunar
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
+    };
+    # works -> see e.g. nm-applet tray icon
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+    # works -> set in sway config and .Xresources (for xwayland)
+    cursorTheme = {
+      name = "Numix-Cursor";
+      package = pkgs.numix-cursor-theme;
+    };
+  };
+
 }
 
