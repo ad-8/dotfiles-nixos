@@ -68,6 +68,17 @@
     # thanks https://mynixos.com/nixpkgs/option/programs.light.enable 
     programs.light.enable = true;
 
+    services = {
+      syncthing = {
+        enable = true;
+        group = "users";
+        user = "ax";
+        dataDir = "/home/ax/syncthing"; # Default folder for new synced folders
+        configDir = "/home/ax/.config/syncthing"; # Folder for Syncthing's settings and keys
+      };
+    };
+    networking.firewall.allowedTCPPorts = [ 8384 22000 ];
+    networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 
     # Configure keymap in X11
     services.xserver.xkb = {
