@@ -1,8 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  # finally ... at least gtk works now
-  # https://hoverbear.org/blog/declarative-gnome-configuration-in-nixos/ (relevant section towards the bottom)
+  # https://hoverbear.org/blog/declarative-gnome-configuration-in-nixos/
   gtk = {
     enable = true;
     # works -> see e.g. thunar

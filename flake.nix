@@ -29,9 +29,9 @@
 
   outputs = { self, nixpkgs, home-manager, ... }: let
     system = "x86_64-linux";
-
-    # mkHost is a function that takes an attribute set (map/hash like) with name and username as arguments
-    # The return value of mkHost is the result of calling the nixosSystem function
+    # mkHost is a function that takes an attribute set (map/hash like)
+    # with hostname and username as arguments.
+    # The return value of mkHost is the result of calling the nixosSystem function.
     mkHost = { hostname, username }:
     nixpkgs.lib.nixosSystem {
       inherit system;
