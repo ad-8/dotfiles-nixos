@@ -56,3 +56,10 @@ boot.initrd.luks.devices... = "/dev/disk/by-uuid/..."
 
 5. `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#nix-vm` 
 
+
+# Breakage Counter = 1
+How often did we need to revert back to an older generation to recover basically fatal errors
+# Toal Breakage Counter = 0
+This better never reaches 1
+
+
