@@ -30,6 +30,11 @@
     '';
 
     security.polkit.enable = true;
+    # Auto-decrypt keyring on login (The NixOS module for GNOME Keyring enables its PAM module automatically
+    # via security.pam.services.*.enableGnomeKeyring, however the Home Manager module does not), so:
+    #
+    # works with GDM, but sadly not (yet?) with ly
+    security.pam.services.login.enableGnomeKeyring = true;
 
     # Set your time zone.
     time.timeZone = "Europe/Berlin";
