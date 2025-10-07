@@ -3,22 +3,27 @@ Testing the meme v2.
 
 # Commands
 ## run after changing config
-`sudo nixos-rebuild dry-run --flake ~/dotfiles-nixos#nix-vm`
+`sudo nixos-rebuild dry-run --flake ~/dotfiles-nixos#ax-mac`
 
-`sudo nixos-rebuild switch --flake ~/dotfiles-nixos#nix-vm`
+`sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac`
 
-## update packages
+
+# update packages
 not sure yet, sth. that worked when pointing to `nixpkgs/nixos-unstable` in `flake.nix`:
 
-### sudo apt update
+## sudo apt update
 cd into `dotfiles-nixos`, then:
-`nix flake update`
-### sudo apt upgrade
+`nix flake update` 
+(*without sudo* - had to `chown -R ax:users .git/` when a permission error occured)
+
+## sudo apt upgrade
 after this, do the *dry-run* from above to see changes
 or the *switch* to apply them
 
+
 # Annoyances
 - while modularizing the config, `nixos-rebuild` does *not* find a new file if it exists, but is *untracked* in the git repo
+
 
 # Links
 ## CLI Installation with flake and home-manager
@@ -27,6 +32,7 @@ https://www.tonybtw.com/tutorial/nixos-from-scratch/
 ## Others
 https://search.nixos.org/packages  
 https://mynixos.com/
+
 
 # GUI Installation with LUKS -> convert to flake config
 Install via Graphical ISO Image, which has a fast and easy Calamares installer 
