@@ -25,6 +25,10 @@
     # Enable networking
     networking.networkmanager.enable = true;
 
+    security.sudo.extraConfig = ''
+      Defaults timestamp_timeout=30
+    '';
+
     # Set your time zone.
     time.timeZone = "Europe/Berlin";
 
