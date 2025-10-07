@@ -2,17 +2,23 @@
 
 {
   ps = with pkgs; [
+    # programs.sway.enable installs swaylock, swayidle
+    # 
     # light # enabled in configuration.nix
+    # 
     # rofi 2.0 (which has wayland support) not in 25.05 repo
     ddcutil
     dunst
     gammastep
     libnotify
     networkmanagerapplet
+    playerctl
     rofi-calc
     rofi-wayland
     sct
+    swaybg
     waybar
+    wl-clipboard
     wmenu
   ];
 }

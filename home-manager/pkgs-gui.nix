@@ -4,8 +4,12 @@
   ps = with pkgs; [
     brave
     gimp3
-    libreoffice-still
+    gnome-disk-utility
     kdePackages.dolphin
     kdePackages.okular
+    keepassxc
+    libreoffice-still
+    mpv
+    qbittorrent
   ];
 }
