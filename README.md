@@ -17,6 +17,9 @@ cd into `dotfiles-nixos`, then:
 after this, do the *dry-run* from above to see changes
 or the *switch* to apply them
 
+# Annoyances
+- while modularizing the config, `nixos-rebuild` does *not* find a new file if it exists, but is *untracked* in the git repo
+
 # Links
 ## CLI Installation with flake and home-manager
 https://www.youtube.com/watch?v=2QjzI5dXwDY  

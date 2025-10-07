@@ -3,7 +3,7 @@
 {
 
   imports = [
-    ./home/gtk.nix
+    ../../home-manager/gtk.nix
   ];
 
   home.stateVersion = "25.05";
@@ -50,6 +50,7 @@
     # essentials
     file
     psmisc # provides killall
+    tree
 
     # coding
     babashka
