@@ -18,6 +18,7 @@ in
   home.homeDirectory = "/home/ax";
   home.packages = with pkgs; [
     # other
+    gcr # Provides org.gnome.keyring.SystemPrompter
     libqalculate # provides qalc for rofi-calc
   ] ++ pkgs_base.ps ++ pkgs_gui.ps ++ pkgs_dev.ps ++ pkgs_wm.ps;
 
@@ -46,6 +47,9 @@ in
       TimeoutStopSec = 10;
     };
   };
+
+  # https://wiki.nixos.org/wiki/Secret_Service
+  services.gnome-keyring.enable = true;
 
   # this overwrote the config in ~/dotfiles (made backup like we set it up though)
   # -> using existing config file for now 
