@@ -8,6 +8,7 @@
     dunst
     gammastep
     libnotify
+    networkmanagerapplet
     rofi-calc
     rofi-wayland
     sct

@@ -106,14 +106,8 @@
       description = "ax";
       extraGroups = [ "networkmanager" "video" "wheel" ];
       packages = with pkgs; [
-        #  thunderbird
-        alacritty
-        fastfetch
         git
-        htop
-        nnn
         vim
-        networkmanagerapplet
       ];
     };
 

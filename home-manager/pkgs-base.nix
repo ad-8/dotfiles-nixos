@@ -19,6 +19,7 @@
     stow
     tealdeer
     tree
+    wget
     zoxide
   ];
 }
