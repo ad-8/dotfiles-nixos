@@ -32,17 +32,17 @@
 
     # mkHost is a function that takes an attribute set (map/hash like) with name and username as arguments
     # The return value of mkHost is the result of calling the nixosSystem function
-    mkHost = { name, username }:
+    mkHost = { hostname, username }:
     nixpkgs.lib.nixosSystem {
       inherit system;
       modules = [
-        ./hosts/${name}/configuration.nix
+        ./hosts/${hostname}/configuration.nix
         home-manager.nixosModules.home-manager
         {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.${username} = import ./hosts/${name}/home.nix;
+            users.${username} = import ./hosts/${hostname}/home.nix;
             backupFileExtension = "bak";
           };
         }
@@ -50,8 +50,8 @@
     };
   in {
     nixosConfigurations = {
-      ax-mac = mkHost { name = "ax-mac"; username = "ax"; };
-      ax-desktop = mkHost { name = "ax-desktop"; username = "ax"; };
+      ax-mac = mkHost { hostname = "ax-mac"; username = "ax"; };
+      ax-desktop = mkHost { hostname = "ax-desktop"; username = "ax"; };
     };
   };
 }
