@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 let
-  # Import pkgs-base.nix
   pkgs_base = import ../../home-manager/pkgs-base.nix { inherit pkgs; };
   pkgs_gui = import ../../home-manager/pkgs-gui.nix { inherit pkgs; };
   pkgs_dev = import ../../home-manager/pkgs-dev.nix { inherit pkgs; };
@@ -12,28 +11,14 @@ in
   imports = [
     ../../home-manager/git.nix
     ../../home-manager/gtk.nix
-    # not working
-    # ../../home-manager/pkgs-base.nix
   ];
 
   home.stateVersion = "25.05";
   home.username = "ax";
   home.homeDirectory = "/home/ax";
   home.packages = with pkgs; [
-    # rofi 2.0 (which has wayland support) not in 25.05 repo
-
-    # legacy
-    # arandr
-    # i3status-rust
-
     # other
     libqalculate # provides qalc for rofi-calc
-    tealdeer
-
-    # essentials
-    file
-    psmisc # provides killall
-    tree
   ] ++ pkgs_base.ps ++ pkgs_gui.ps ++ pkgs_dev.ps ++ pkgs_wm.ps;
 
   programs.bash = {
