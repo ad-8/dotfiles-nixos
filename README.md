@@ -50,9 +50,10 @@ Also add `git` and `vim` to pkgs for the next steps.
 
 3. git clone *dotfiles*, *dotfiles-nixos* and *scripts*, then `cp /etc/nixos/hardware-configuration.nix ~/dotfiles-nixos/hosts/<host>/` 
 
-4. (*if using LUKS, else skip this step*) add this LUKS line from `/etc/nixos/configuration.nix` to `~/dotfiles-nixos/configuration.nix`
+4. if NOT using LUKS, skip this step  
+    add this LUKS line from `/etc/nixos/configuration.nix` to `~/dotfiles-nixos/configuration.nix`
 
-boot.initrd.luks.devices... = "/dev/disk/by-uuid/..."
+    `boot.initrd.luks.devices... = "/dev/disk/by-uuid/..."`
 
 5. `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-vm` 
 
