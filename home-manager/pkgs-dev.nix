@@ -7,6 +7,7 @@
     clojure
     delta
     gh
+    jq
     leiningen
     rbenv
     ruby_3_4

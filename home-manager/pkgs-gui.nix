@@ -12,6 +12,7 @@
     libreoffice-still
     mpv
     pavucontrol
+    picard
     qbittorrent
     xfce.mousepad
     xfce.ristretto
