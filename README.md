@@ -48,18 +48,18 @@ Also add `git` and `vim` to pkgs for the next steps.
 
 2. `sudo nixos-rebuild switch`
 
-3. git clone *dotfiles*, *dotfiles-nixos* and *scripts*, then `cp /etc/nixos/hardware-configuration.nix ~/dotfiles-nixos/` 
+3. git clone *dotfiles*, *dotfiles-nixos* and *scripts*, then `cp /etc/nixos/hardware-configuration.nix ~/dotfiles-nixos/hosts/<host>/` 
 
-4. add this LUKS line from `/etc/nixos/configuration.nix` to `~/dotfiles-nixos/configuration.nix`
+4. (*if using LUKS, else skip this step*) add this LUKS line from `/etc/nixos/configuration.nix` to `~/dotfiles-nixos/configuration.nix`
 
 boot.initrd.luks.devices... = "/dev/disk/by-uuid/..."
 
-5. `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#nix-vm` 
+5. `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-vm` 
 
 
 # Breakage Counter = 1
 How often did we need to revert back to an older generation to recover basically fatal errors
-# Toal Breakage Counter = 0
+# Total Breakage Counter = 0
 This better never reaches 1
 
 
