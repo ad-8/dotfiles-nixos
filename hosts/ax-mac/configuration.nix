@@ -99,6 +99,9 @@
     # Enable CUPS to print documents.
     services.printing.enable = true;
 
+    # laptop battery info via `upower --dump`
+    services.upower.enable = true;
+
     # Enable sound with pipewire.
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;
