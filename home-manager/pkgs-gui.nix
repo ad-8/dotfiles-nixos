@@ -13,5 +13,6 @@
     mpv
     qbittorrent
     xfce.mousepad
+    xfce.ristretto
   ];
 }

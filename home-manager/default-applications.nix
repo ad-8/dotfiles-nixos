@@ -7,12 +7,12 @@
 # ls /etc/profiles/per-user/$(id -n -u)/share/applications # for user packages
 # ls ~/.nix-profile/share/applications # for home-manager packages
 let
+  audioPlayer = [ "mpv.desktop" ];
   browser = [ "firefox.desktop" ];
   emacs = [ "emacs.desktop" ];
-  imageViewer = [ "org.kde.gwenview.desktop" ];
+  imageViewer = [ "org.xfce.ristretto.desktop" ];
   pdfReader = [ "org.kde.okular.desktop" ];
   simpleTextEditor = [ "org.xfce.mousepad.desktop" ];
-  audioPlayer = [ "mpv.desktop" ];
   videoPlayer = [ "mpv.desktop" ];
 in
 {
