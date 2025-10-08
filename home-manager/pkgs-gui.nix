@@ -12,5 +12,6 @@
     libreoffice-still
     mpv
     qbittorrent
+    xfce.mousepad
   ];
 }

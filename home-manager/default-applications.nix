@@ -1,22 +1,41 @@
 { config, lib, pkgs, ... }:
 
+# https://wiki.nixos.org/wiki/Default_applications
+# 
+# To list all .desktop-files, run
+# ls /run/current-system/sw/share/applications # for global packages
+# ls /etc/profiles/per-user/$(id -n -u)/share/applications # for user packages
+# ls ~/.nix-profile/share/applications # for home-manager packages
+let
+  browser = [ "firefox.desktop" ];
+  emacs = [ "emacs.desktop" ];
+  imageViewer = [ "org.kde.gwenview.desktop" ];
+  pdfReader = [ "org.kde.okular.desktop" ];
+  simpleTextEditor = [ "org.xfce.mousepad.desktop" ];
+in
 {
-  # https://wiki.nixos.org/wiki/Default_applications
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
       # HTML-files and URLs
-      "text/html" = "firefox.desktop";
-      "x-scheme-handler/http" = "firefox.desktop";
-      "x-scheme-handler/https" = "firefox.desktop";
-      "x-scheme-handler/about" = "firefox.desktop";
-      "x-scheme-handler/unknown" = "firefox.desktop";
+      "text/html" = browser;
+      "x-scheme-handler/http" = browser;
+      "x-scheme-handler/https" = browser;
+      "x-scheme-handler/about" = browser;
+      "x-scheme-handler/unknown" = browser;
       # Images
-      "image/gif" = [ "org.kde.gwenview.desktop" ];
-      "image/jpeg" = [ "org.kde.gwenview.desktop" ];
-      "image/jpg" = [ "org.kde.gwenview.desktop" ];
-      "image/png" = [ "org.kde.gwenview.desktop" ];
-      "image/webp" = [ "org.kde.gwenview.desktop" ];
+      "image/gif" = imageViewer;
+      "image/jpeg" = imageViewer;
+      "image/jpg" = imageViewer;
+      "image/png" = imageViewer;
+      "image/webp" = imageViewer;
+      "image/*" = imageViewer;
+      # Documents
+      "application/pdf" = pdfReader;
+      "text/plain" = simpleTextEditor;
+      "text/markdown" = emacs;
+      "text/org" = emacs;
+      "text/*" = simpleTextEditor;
     };
   };
 }
