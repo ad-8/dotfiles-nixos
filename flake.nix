@@ -9,24 +9,6 @@
 		};
 	};
 
-	# outputs = { self, nixpkgs, home-manager, ...}: {
-	# 	nixosConfigurations.ax-mac = nixpkgs.lib.nixosSystem {
-	# 		system = "x86_64-linux";
-	# 		modules = [	
-	# 		./configuration.nix
-	# 		home-manager.nixosModules.home-manager
-	# 		{
-	# 			home-manager = {
-	# 				useGlobalPkgs = true;
-	# 				useUserPackages = true;
-	# 				users.ax = import ./home.nix;
-	# 				backupFileExtension = "bak";
-	# 			};
-	# 		}
-	# 		];
-	# 	};
-	# };
-
   outputs = { self, nixpkgs, home-manager, ... }: let
     system = "x86_64-linux";
     # mkHost is a function that takes an attribute set (map/hash like)
