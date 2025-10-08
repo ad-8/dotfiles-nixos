@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  pkgs_base = import ../../home-manager/pkgs-base.nix { inherit pkgs; };
+  pkgs_core = import ../../home-manager/pkgs-core.nix { inherit pkgs; };
   pkgs_gui = import ../../home-manager/pkgs-gui.nix { inherit pkgs; };
   pkgs_dev = import ../../home-manager/pkgs-dev.nix { inherit pkgs; };
   pkgs_wm = import ../../home-manager/pkgs-wm.nix { inherit pkgs; };
@@ -20,7 +20,7 @@ in
     # other
     gcr # Provides org.gnome.keyring.SystemPrompter
     libqalculate # provides qalc for rofi-calc
-  ] ++ pkgs_base.ps ++ pkgs_wm.ps;
+  ] ++ pkgs_core.ps ++ pkgs_wm.ps;
 
   programs.bash = {
 	  enable = true;

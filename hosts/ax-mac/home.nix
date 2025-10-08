@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  pkgs_base = import ../../home-manager/pkgs-base.nix { inherit pkgs; };
+  pkgs_core = import ../../home-manager/pkgs-core.nix { inherit pkgs; };
   pkgs_extra = import ../../home-manager/pkgs-extra.nix { inherit pkgs; };
   pkgs_gui = import ../../home-manager/pkgs-gui.nix { inherit pkgs; };
   pkgs_dev = import ../../home-manager/pkgs-dev.nix { inherit pkgs; };
@@ -34,7 +34,7 @@ in
     gcr # Provides org.gnome.keyring.SystemPrompter
     libqalculate # provides qalc for rofi-calc
     multimarkdown # to enable markdown-preview in doom emacs
-  ] ++ pkgs_base.ps ++ pkgs_extra.ps ++ pkgs_gui.ps ++ pkgs_dev.ps ++ pkgs_wm.ps;
+  ] ++ pkgs_core.ps ++ pkgs_extra.ps ++ pkgs_gui.ps ++ pkgs_dev.ps ++ pkgs_wm.ps;
 
   programs.bash = {
 	  enable = true;
