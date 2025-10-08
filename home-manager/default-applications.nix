@@ -12,6 +12,7 @@ let
   imageViewer = [ "org.kde.gwenview.desktop" ];
   pdfReader = [ "org.kde.okular.desktop" ];
   simpleTextEditor = [ "org.xfce.mousepad.desktop" ];
+  audioPlayer = [ "mpv.desktop" ];
   videoPlayer = [ "mpv.desktop" ];
 in
 {
@@ -39,15 +40,15 @@ in
       "text/org" = emacs;
       "text/*" = simpleTextEditor;
       # Audio
-      "audio/mpeg"         = videoPlayer; # .mp3
-      "audio/ogg"          = videoPlayer;
-      "audio/flac"         = videoPlayer;
-      "audio/wav"          = videoPlayer;
-      "audio/x-wav"        = videoPlayer;
-      "audio/aac"          = videoPlayer;
-      "audio/mp4"          = videoPlayer; # .m4a
-      "audio/x-m4a"        = videoPlayer;
-      "audio/*"            = videoPlayer;
+      "audio/mpeg"         = audioPlayer; # .mp3
+      "audio/ogg"          = audioPlayer;
+      "audio/flac"         = audioPlayer;
+      "audio/wav"          = audioPlayer;
+      "audio/x-wav"        = audioPlayer;
+      "audio/aac"          = audioPlayer;
+      "audio/mp4"          = audioPlayer; # .m4a
+      "audio/x-m4a"        = audioPlayer;
+      "audio/*"            = audioPlayer;
       # Video
       "video/mp4"          = videoPlayer;
       "video/webm"         = videoPlayer;
