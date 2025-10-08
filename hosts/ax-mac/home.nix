@@ -17,10 +17,6 @@ in
   home.username = "ax";
   home.homeDirectory = "/home/ax";
   home.packages = with pkgs; [
-    # other
-    gcr # Provides org.gnome.keyring.SystemPrompter
-    libqalculate # provides qalc for rofi-calc
-
     # TODO proton vpn setup
     # protonvpn-cli # sadly, does not let me log in (API error)
     # and gui doesn't remember credentials after logout/login (works after reboot again), even with those 3 pkgs below 
@@ -29,6 +25,12 @@ in
     python313Packages.proton-keyring-linux # ProtonVPN core component to access Linux's keyring
     python313Packages.proton-vpn-network-manager # Provides the necessary functionality for other ProtonVPN components to interact with NetworkManager
 
+    # printing
+    hplip
+    system-config-printer
+    # other
+    gcr # Provides org.gnome.keyring.SystemPrompter
+    libqalculate # provides qalc for rofi-calc
   ] ++ pkgs_base.ps ++ pkgs_gui.ps ++ pkgs_dev.ps ++ pkgs_wm.ps;
 
   programs.bash = {
