@@ -9,6 +9,7 @@ in
 {
 
   imports = [
+    ../../home-manager/default-applications.nix
     ../../home-manager/git.nix
     ../../home-manager/gtk.nix
   ];
