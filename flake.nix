@@ -33,7 +33,8 @@
   in {
     nixosConfigurations = {
       ax-mac = mkHost { hostname = "ax-mac"; username = "ax"; };
-      ax-desktop = mkHost { hostname = "ax-desktop"; username = "ax"; };
+      # ax-desktop = mkHost { hostname = "ax-desktop"; username = "ax"; };
+      ax-vm = mkHost { hostname = "ax-vm"; username = "ax"; };
     };
   };
 }
