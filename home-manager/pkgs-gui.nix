@@ -11,6 +11,7 @@
     keepassxc
     libreoffice-still
     mpv
+    pavucontrol
     qbittorrent
     xfce.mousepad
     xfce.ristretto

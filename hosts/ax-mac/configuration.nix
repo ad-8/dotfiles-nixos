@@ -99,6 +99,9 @@
     # Enable CUPS to print documents.
     services.printing.enable = true;
 
+    hardware.bluetooth.enable = true;
+    services.blueman.enable = true; # provides blueman-applet and blueman-manager
+
     # laptop battery info via `upower --dump`
     services.upower.enable = true;
 
