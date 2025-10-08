@@ -31,6 +31,7 @@ in
     # other
     gcr # Provides org.gnome.keyring.SystemPrompter
     libqalculate # provides qalc for rofi-calc
+    multimarkdown # to enable markdown-preview in doom emacs
   ] ++ pkgs_base.ps ++ pkgs_gui.ps ++ pkgs_dev.ps ++ pkgs_wm.ps;
 
   programs.bash = {
