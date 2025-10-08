@@ -22,7 +22,8 @@ or the *switch* to apply them
 
 
 # Annoyances
-- while modularizing the config, `nixos-rebuild` does *not* find a new file if it exists, but is *untracked* in the git repo
+- while modularizing the config, `nixos-rebuild` does *not* find a new file if it exists, but is *untracked* in the git repo  
+  (this cost me an hour to find out LULZ)
 
 
 # Links
