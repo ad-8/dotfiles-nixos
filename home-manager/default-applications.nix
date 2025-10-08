@@ -12,6 +12,7 @@ let
   imageViewer = [ "org.kde.gwenview.desktop" ];
   pdfReader = [ "org.kde.okular.desktop" ];
   simpleTextEditor = [ "org.xfce.mousepad.desktop" ];
+  videoPlayer = [ "mpv.desktop" ];
 in
 {
   xdg.mimeApps = {
@@ -31,11 +32,31 @@ in
       "image/webp" = imageViewer;
       "image/*" = imageViewer;
       # Documents
+      "application/json" = browser;
       "application/pdf" = pdfReader;
       "text/plain" = simpleTextEditor;
       "text/markdown" = emacs;
       "text/org" = emacs;
       "text/*" = simpleTextEditor;
+      # Audio
+      "audio/mpeg"         = videoPlayer; # .mp3
+      "audio/ogg"          = videoPlayer;
+      "audio/flac"         = videoPlayer;
+      "audio/wav"          = videoPlayer;
+      "audio/x-wav"        = videoPlayer;
+      "audio/aac"          = videoPlayer;
+      "audio/mp4"          = videoPlayer; # .m4a
+      "audio/x-m4a"        = videoPlayer;
+      "audio/*"            = videoPlayer;
+      # Video
+      "video/mp4"          = videoPlayer;
+      "video/webm"         = videoPlayer;
+      "video/x-matroska"   = videoPlayer; # .mkv
+      "video/quicktime"    = videoPlayer; # .mov
+      "video/x-msvideo"    = videoPlayer; # .avi
+      "video/x-ms-wmv"     = videoPlayer; # .wmv
+      "video/ogg"          = videoPlayer; # .ogv (Ogg video)
+      "video/*"            = videoPlayer;
     };
   };
 }
