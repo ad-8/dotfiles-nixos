@@ -31,6 +31,7 @@ in
     hplip
     system-config-printer
     # other
+    chezmoi
     gcr # Provides org.gnome.keyring.SystemPrompter
     libqalculate # provides qalc for rofi-calc
     multimarkdown # to enable markdown-preview in doom emacs
