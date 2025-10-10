@@ -9,7 +9,7 @@ Testing the meme v2.
 
 
 # update packages
-not sure yet, sth. that worked when pointing to `nixpkgs/nixos-unstable` in `flake.nix`:
+not 100% sure, but this works so far
 
 ## sudo apt update
 cd into `dotfiles-nixos`, then:
