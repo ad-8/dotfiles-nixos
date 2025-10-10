@@ -1,19 +1,19 @@
 { config, pkgs, ... }:
 
-let
-  pkgs_core = import ../../home-manager/pkgs-core.nix { inherit pkgs; };
-  pkgs_extra = import ../../home-manager/pkgs-extra.nix { inherit pkgs; };
-  pkgs_gui = import ../../home-manager/pkgs-gui.nix { inherit pkgs; };
-  pkgs_dev = import ../../home-manager/pkgs-dev.nix { inherit pkgs; };
-  pkgs_wm = import ../../home-manager/pkgs-wm.nix { inherit pkgs; };
-in
 {
-
   imports = [
     ../../home-manager/default-applications.nix
     ../../home-manager/git.nix
     ../../home-manager/gtk.nix
+    ../../home-manager/pkgs-bundle.nix
   ];
+
+  # https://github.com/vimjoyer/modularize-video (as seen in https://www.youtube.com/watch?v=vYc6IzKvAJQ)
+  pkgsCore.enable = true;
+  pkgsDev.enable = true;
+  pkgsExtra.enable = true;
+  pkgsGui.enable = true;
+  pkgsWm.enable = true;
 
   home.stateVersion = "25.05";
   home.username = "ax";
@@ -35,7 +35,7 @@ in
     gcr # Provides org.gnome.keyring.SystemPrompter
     libqalculate # provides qalc for rofi-calc
     multimarkdown # to enable markdown-preview in doom emacs
-  ] ++ pkgs_core.ps ++ pkgs_extra.ps ++ pkgs_gui.ps ++ pkgs_dev.ps ++ pkgs_wm.ps;
+  ];
 
   programs.bash = {
 	  enable = true;
