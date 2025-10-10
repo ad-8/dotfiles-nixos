@@ -8,4 +8,7 @@
     ./pkgs-gui.nix
     ./pkgs-wm.nix
   ];
+
+  pkgsCore.enable = lib.mkDefault true;
 }
+
