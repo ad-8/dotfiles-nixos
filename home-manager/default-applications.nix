@@ -16,48 +16,63 @@ let
   videoPlayer = [ "mpv.desktop" ];
 in
 {
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      # HTML-files and URLs
-      "text/html" = browser;
-      "x-scheme-handler/http" = browser;
-      "x-scheme-handler/https" = browser;
-      "x-scheme-handler/about" = browser;
-      "x-scheme-handler/unknown" = browser;
-      # Images
-      "image/gif" = imageViewer;
-      "image/jpeg" = imageViewer;
-      "image/jpg" = imageViewer;
-      "image/png" = imageViewer;
-      "image/webp" = imageViewer;
-      "image/*" = imageViewer;
-      # Documents
-      "application/json" = browser;
-      "application/pdf" = pdfReader;
-      "text/plain" = simpleTextEditor;
-      "text/markdown" = emacs;
-      "text/org" = emacs;
-      "text/*" = simpleTextEditor;
-      # Audio
-      "audio/mpeg"         = audioPlayer; # .mp3
-      "audio/ogg"          = audioPlayer;
-      "audio/flac"         = audioPlayer;
-      "audio/wav"          = audioPlayer;
-      "audio/x-wav"        = audioPlayer;
-      "audio/aac"          = audioPlayer;
-      "audio/mp4"          = audioPlayer; # .m4a
-      "audio/x-m4a"        = audioPlayer;
-      "audio/*"            = audioPlayer;
-      # Video
-      "video/mp4"          = videoPlayer;
-      "video/webm"         = videoPlayer;
-      "video/x-matroska"   = videoPlayer; # .mkv
-      "video/quicktime"    = videoPlayer; # .mov
-      "video/x-msvideo"    = videoPlayer; # .avi
-      "video/x-ms-wmv"     = videoPlayer; # .wmv
-      "video/ogg"          = videoPlayer; # .ogv (Ogg video)
-      "video/*"            = videoPlayer;
+  options = {
+    defaultApplicationsMime.enable = lib.mkEnableOption "Enable defaultApplicationsMime";
+  };
+
+  config = lib.mkIf config.defaultApplicationsMime.enable {
+    xdg.mimeApps = {
+      enable = true;
+      defaultApplications = {
+        # HTML-files and URLs
+        "text/html" = browser;
+        "x-scheme-handler/http" = browser;
+        "x-scheme-handler/https" = browser;
+        "x-scheme-handler/about" = browser;
+        "x-scheme-handler/unknown" = browser;
+        # Images
+        "image/gif" = imageViewer;
+        "image/jpeg" = imageViewer;
+        "image/jpg" = imageViewer;
+        "image/png" = imageViewer;
+        "image/webp" = imageViewer;
+        "image/*" = imageViewer;
+        # Documents
+        "application/json" = browser;
+        "application/pdf" = pdfReader;
+        "text/plain" = simpleTextEditor;
+        "text/markdown" = emacs;
+        "text/org" = emacs;
+        "text/*" = simpleTextEditor;
+        # Audio
+        "audio/mpeg"         = audioPlayer; # .mp3
+        "audio/ogg"          = audioPlayer;
+        "audio/flac"         = audioPlayer;
+        "audio/wav"          = audioPlayer;
+        "audio/x-wav"        = audioPlayer;
+        "audio/aac"          = audioPlayer;
+        "audio/mp4"          = audioPlayer; # .m4a
+        "audio/x-m4a"        = audioPlayer;
+        "audio/*"            = audioPlayer;
+        # Video
+        "video/mp4"          = videoPlayer;
+        "video/webm"         = videoPlayer;
+        "video/x-matroska"   = videoPlayer; # .mkv
+        "video/quicktime"    = videoPlayer; # .mov
+        "video/x-msvideo"    = videoPlayer; # .avi
+        "video/x-ms-wmv"     = videoPlayer; # .wmv
+        "video/ogg"          = videoPlayer; # .ogv (Ogg video)
+        "video/*"            = videoPlayer;
+      };
     };
   };
+
+
+
+
+
+
+
+
+
 }

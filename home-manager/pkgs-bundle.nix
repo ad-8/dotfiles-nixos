@@ -2,6 +2,9 @@
 
 {
   imports = [
+    ./default-applications.nix
+    ./git.nix
+    ./gtk.nix
     ./pkgs-core.nix
     ./pkgs-dev.nix
     ./pkgs-extra.nix

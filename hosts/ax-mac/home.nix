@@ -2,9 +2,6 @@
 
 {
   imports = [
-    ../../home-manager/default-applications.nix
-    ../../home-manager/git.nix
-    ../../home-manager/gtk.nix
     ../../home-manager/pkgs-bundle.nix
   ];
 
@@ -14,6 +11,10 @@
   pkgsExtra.enable = true;
   pkgsGui.enable = true;
   pkgsWm.enable = true;
+
+  defaultApplicationsMime.enable = true;
+  configGit.enable = true;
+  configGtk.enable = true;
 
   home.stateVersion = "25.05";
   home.username = "ax";
