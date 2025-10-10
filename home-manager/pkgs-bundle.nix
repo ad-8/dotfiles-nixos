@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./default-applications.nix
+    ./default-applications-mime.nix
     ./git.nix
     ./gtk.nix
     ./pkgs-core.nix
