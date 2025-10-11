@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../home-manager/pkgs-bundle.nix
+    ../../home-manager/all-modules.nix
   ];
 
   # pkgsCore.enable = true; # enabled by default, see pkgs-bundle.nix

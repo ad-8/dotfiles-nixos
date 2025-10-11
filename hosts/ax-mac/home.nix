@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../home-manager/pkgs-bundle.nix
+    ../../home-manager/all-modules.nix
   ];
 
   # https://github.com/vimjoyer/modularize-video (as seen in https://www.youtube.com/watch?v=vYc6IzKvAJQ)
