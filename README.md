@@ -20,9 +20,8 @@ not 100% sure, but this works so far
 - *switch* to apply them
 
 # collect garbage
-`sudo nix-collect-garbage -d`
-followed by
-`sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac`,
+`sudo nix-collect-garbage -d` followed by  
+`sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac`,  
 which removes the old generations from the boot menu
 
 # Annoyances
