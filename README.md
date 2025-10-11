@@ -20,9 +20,8 @@ not 100% sure, but this works so far
 - *switch* to apply them
 
 # collect garbage
-`sudo nix-collect-garbage -d` followed by  
-`sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac`,  
-which removes the old generations from the boot menu
+1. `sudo nix-collect-garbage -d`
+2. `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac` (to remove the old generations from the boot menu)
 
 # Annoyances
 - while modularizing the config, `nixos-rebuild` does *not* find a new file if it exists, but is *untracked* in the git repo  
@@ -31,11 +30,13 @@ which removes the old generations from the boot menu
 
 # Links
 ## CLI Installation with flake and home-manager
-https://www.youtube.com/watch?v=2QjzI5dXwDY  
-https://www.tonybtw.com/tutorial/nixos-from-scratch/
+- https://www.youtube.com/watch?v=2QjzI5dXwDY
+- https://www.tonybtw.com/tutorial/nixos-from-scratch/
 ## Others
-https://search.nixos.org/packages  
-https://mynixos.com/
+- https://search.nixos.org/packages
+- https://wiki.nixos.org/wiki/NixOS_Wiki
+- https://nixos.wiki/
+- https://mynixos.com/
 
 
 # GUI Installation with LUKS -> convert to flake config
