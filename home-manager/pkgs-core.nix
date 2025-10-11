@@ -8,7 +8,7 @@
   config = lib.mkIf config.pkgsCore.enable {
     home.packages = with pkgs; [
       alacritty
-      bat 
+      bat
       delta
       emacs
       eza
@@ -24,6 +24,7 @@
       starship
       stow
       tealdeer
+      tokei
       tree
       wget
       zoxide

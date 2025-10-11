@@ -15,7 +15,6 @@
       leiningen
       rbenv
       ruby_3_4
-      tokei
       vscodium
     ];
   };
