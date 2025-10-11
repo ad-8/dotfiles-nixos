@@ -12,13 +12,12 @@ Testing the meme v2.
 not 100% sure, but this works so far
 
 ## sudo apt update
-cd into `dotfiles-nixos`, then:
-`nix flake update` 
-(*without sudo* - had to `chown -R ax:users .git/` when a permission error occured)
+1. `cd ~/dotfiles-nixos`
+2. `nix flake update` 
 
 ## sudo apt upgrade
-after this, do the *dry-run* from above to see changes
-or the *switch* to apply them
+- *dry-run* to see changes
+- *switch* to apply them
 
 # collect garbage
 `sudo nix-collect-garbage -d`
