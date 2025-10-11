@@ -10,7 +10,6 @@
       # clojure-lsp # needed?
       babashka
       clojure
-      delta
       gh
       jq
       leiningen
