@@ -19,9 +19,7 @@
   home.username = "ax";
   home.homeDirectory = "/home/ax";
   home.packages = with pkgs; [
-    # other
-    gcr # Provides org.gnome.keyring.SystemPrompter
-    libqalculate # provides qalc for rofi-calc
+    # all pkgs are listed in the home-manager/pkgs-*.nix files
   ];
 
   programs.bash = {
