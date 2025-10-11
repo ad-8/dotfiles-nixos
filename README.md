@@ -8,20 +8,21 @@ Testing the meme v2.
 `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac`
 
 
-# update packages
+## update packages
 not 100% sure, but this works so far
 
-## sudo apt update
+### sudo apt update
 1. `cd ~/dotfiles-nixos`
 2. `nix flake update` 
 
-## sudo apt upgrade
+### sudo apt upgrade
 - *dry-run* to see changes
 - *switch* to apply them
 
-# collect garbage
+## collect garbage
 1. `sudo nix-collect-garbage -d`
 2. `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac` (to remove the old generations from the boot menu)
+
 
 # Annoyances
 - while modularizing the config, `nixos-rebuild` does *not* find a new file if it exists, but is *untracked* in the git repo  
