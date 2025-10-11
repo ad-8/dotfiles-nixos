@@ -1,17 +1,19 @@
 { config, pkgs, ... }:
 
-let
-  pkgs_core = import ../../home-manager/pkgs-core.nix { inherit pkgs; };
-  pkgs_gui = import ../../home-manager/pkgs-gui.nix { inherit pkgs; };
-  pkgs_dev = import ../../home-manager/pkgs-dev.nix { inherit pkgs; };
-  pkgs_wm = import ../../home-manager/pkgs-wm.nix { inherit pkgs; };
-in
 {
-
   imports = [
-    ../../home-manager/git.nix
-    ../../home-manager/gtk.nix
+    ../../home-manager/pkgs-bundle.nix
   ];
+
+  # pkgsCore.enable = true; # enabled by default, see pkgs-bundle.nix
+  pkgsDev.enable = false;
+  pkgsExtra.enable = false;
+  pkgsGui.enable = false;
+  pkgsWm.enable = true;
+
+  defaultApplicationsMime.enable = true;
+  configGit.enable = true;
+  configGtk.enable = true;
 
   home.stateVersion = "25.05";
   home.username = "ax";
@@ -20,7 +22,7 @@ in
     # other
     gcr # Provides org.gnome.keyring.SystemPrompter
     libqalculate # provides qalc for rofi-calc
-  ] ++ pkgs_core.ps ++ pkgs_wm.ps;
+  ];
 
   programs.bash = {
 	  enable = true;
