@@ -38,7 +38,9 @@
     # check like on regular distro: systemctl status spice-vdagentd
     #services.spice-vdagentd.enable = true;
 
-    # thanks https://mynixos.com/nixpkgs/option/programs.light.enable 
+    # https://wiki.nixos.org/wiki/Backlight
+    hardware.i2c.enable = true;
+    # thanks https://mynixos.com/nixpkgs/option/programs.light.enable
     programs.light.enable = true;
 
     # https://wiki.nixos.org/wiki/Syncthing
