@@ -1,29 +1,29 @@
 # NixOS
 ~~Testing the meme v2.~~ Second time's the charm?
 
-# Commands
-## run after changing config
+## Commands
+### run after changing config
 `sudo nixos-rebuild dry-run --flake ~/dotfiles-nixos#ax-mac`
 
 `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac`
 
-## update packages
+### update packages
 not 100% sure, but this works so far
 
-### sudo apt update
+#### sudo apt update
 1. `cd ~/dotfiles-nixos`
 2. `nix flake update` 
 
-### sudo apt upgrade
+#### sudo apt upgrade
 - *dry-run* to see changes
 - *switch* to apply them
 
-## collect garbage
+### collect garbage
 1. `sudo nix-collect-garbage -d`
 2. `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac` (to remove the old generations from the boot menu)
 
 
-# GUI Installation with LUKS -> convert to flake config
+## GUI Installation with LUKS -> convert to flake config
 Install via Graphical ISO Image, which has a fast and easy Calamares installer 
 with optional LUKS setup.
 
@@ -47,23 +47,23 @@ Also add `git` and `vim` to pkgs for the next steps.
 5. `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-vm` 
 
 
-# Random notes
+## Random notes
 
-## Annoyances
+### Annoyances
 - while modularizing the config, `nixos-rebuild` does *not* find a new file if it exists, but is *untracked* in the git repo  
   (this cost me an hour to find out LULZ)
 
-## Links
-### CLI Installation with flake and home-manager
+### Links
+#### CLI Installation with flake and home-manager
 - https://www.youtube.com/watch?v=2QjzI5dXwDY
 - https://www.tonybtw.com/tutorial/nixos-from-scratch/
-### Others
+#### Others
 - https://search.nixos.org/packages
 - https://wiki.nixos.org/wiki/NixOS_Wiki
 - https://nixos.wiki/
 - https://mynixos.com/
 
-## Breakage Counter = 1
+### Breakage Counter = 1
 How often did we need to revert back to an older generation to recover basically fatal errors
-## Total Breakage Counter = 0
+### Total Breakage Counter = 0
 This better never reaches 1
