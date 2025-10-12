@@ -7,7 +7,6 @@
 
 `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac`
 
-
 ## update packages
 not 100% sure, but this works so far
 
@@ -22,22 +21,6 @@ not 100% sure, but this works so far
 ## collect garbage
 1. `sudo nix-collect-garbage -d`
 2. `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac` (to remove the old generations from the boot menu)
-
-
-# Annoyances
-- while modularizing the config, `nixos-rebuild` does *not* find a new file if it exists, but is *untracked* in the git repo  
-  (this cost me an hour to find out LULZ)
-
-
-# Links
-## CLI Installation with flake and home-manager
-- https://www.youtube.com/watch?v=2QjzI5dXwDY
-- https://www.tonybtw.com/tutorial/nixos-from-scratch/
-## Others
-- https://search.nixos.org/packages
-- https://wiki.nixos.org/wiki/NixOS_Wiki
-- https://nixos.wiki/
-- https://mynixos.com/
 
 
 # GUI Installation with LUKS -> convert to flake config
@@ -64,9 +47,23 @@ Also add `git` and `vim` to pkgs for the next steps.
 5. `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-vm` 
 
 
-# Breakage Counter = 1
+# Random notes
+
+## Annoyances
+- while modularizing the config, `nixos-rebuild` does *not* find a new file if it exists, but is *untracked* in the git repo  
+  (this cost me an hour to find out LULZ)
+
+## Links
+### CLI Installation with flake and home-manager
+- https://www.youtube.com/watch?v=2QjzI5dXwDY
+- https://www.tonybtw.com/tutorial/nixos-from-scratch/
+### Others
+- https://search.nixos.org/packages
+- https://wiki.nixos.org/wiki/NixOS_Wiki
+- https://nixos.wiki/
+- https://mynixos.com/
+
+## Breakage Counter = 1
 How often did we need to revert back to an older generation to recover basically fatal errors
-# Total Breakage Counter = 0
+## Total Breakage Counter = 0
 This better never reaches 1
-
-
