@@ -1,5 +1,5 @@
 # NixOS
-Testing the meme v2.
+~~Testing the meme v2.~~ Second time's the charm?
 
 # Commands
 ## run after changing config
