@@ -39,6 +39,8 @@
     # check like on regular distro: systemctl status spice-vdagentd
     #services.spice-vdagentd.enable = true;
 
+    services.desktopManager.plasma6.enable = true;
+
     # thanks https://mynixos.com/nixpkgs/option/programs.light.enable 
     programs.light.enable = true;
 
@@ -51,6 +53,29 @@
         user = "ax";
         dataDir = "/home/ax/syncthing"; # Default folder for new synced folders
         configDir = "/home/ax/.config/syncthing"; # Folder for Syncthing's settings and keys
+      };
+    };
+
+    services.keyd = {
+      enable = true;
+      keyboards = {
+        # The name is just the name of the configuration file, it does not really matter
+        default = {
+          ids = [ "*" ]; # what goes into the [id] section, here we select all keyboards
+          # Everything but the ID section:
+          settings = {
+            # The main layer, if you choose to declare it in Nix
+            main = {
+              #capslock = "layer(control)"; # you might need to also enclose the key in quotes if it contains non-alphabetical symbols
+              leftalt = "leftmeta";
+              leftmeta = "leftalt";
+            };
+            otherlayer = {};
+          };
+          extraConfig = ''
+            # put here any extra-config, e.g. you can copy/paste here directly a configuration, just remove the ids part
+          '';
+        };
       };
     };
 
