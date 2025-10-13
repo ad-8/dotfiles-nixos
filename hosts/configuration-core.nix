@@ -4,6 +4,10 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true; # Allow unfree packages
 
+  # Bootloader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
   time.timeZone = "Europe/Berlin";
 
   # Select internationalisation properties.
