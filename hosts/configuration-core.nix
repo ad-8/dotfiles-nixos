@@ -36,7 +36,7 @@
   users.users.ax = {
     isNormalUser = true;
     description = "ax";
-    extraGroups = [ "networkmanager" "video" "wheel" ];
+    extraGroups = [ "libvirtd" "networkmanager" "video" "wheel" ];
     packages = with pkgs; [
       git
       vim
