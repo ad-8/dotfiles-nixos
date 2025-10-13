@@ -10,6 +10,7 @@
       gcr # Provides org.gnome.keyring.SystemPrompter
       imagemagick
       libqalculate # provides qalc for rofi-calc
+      lm_sensors # provides sensors to show cpu temp etc.
       pdftk
       smartmontools
       unzip # no zip, use tar xD
