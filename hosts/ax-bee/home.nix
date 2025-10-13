@@ -28,9 +28,6 @@
     python313Packages.proton-keyring-linux # ProtonVPN core component to access Linux's keyring
     python313Packages.proton-vpn-network-manager # Provides the necessary functionality for other ProtonVPN components to interact with NetworkManager
 
-    # printing
-    hplip
-    system-config-printer
     # other
     chezmoi
     gcr # Provides org.gnome.keyring.SystemPrompter

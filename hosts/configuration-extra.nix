@@ -38,8 +38,6 @@
     };
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true; # provides blueman-applet and blueman-manager
