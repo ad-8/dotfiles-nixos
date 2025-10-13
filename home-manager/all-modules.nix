@@ -2,11 +2,11 @@
 
 {
   imports = [
-    ./default-applications-mime.nix
     ./config-auth-agent.nix
+    ./config-default-applications-mime.nix
+    ./config-git.nix
+    ./config-gtk.nix
     ./config-secret-service.nix
-    ./git.nix
-    ./gtk.nix
     ./pkgs-core.nix
     ./pkgs-dev.nix
     ./pkgs-extra.nix
