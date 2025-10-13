@@ -14,6 +14,7 @@
 
   defaultApplicationsMime.enable = true;
   configAuthAgent.enable = true;
+  configSecretService.enable = true;
   configGit.enable = true;
   configGtk.enable = true;
 
@@ -31,7 +32,6 @@
 
     # other
     chezmoi
-    gcr # Provides org.gnome.keyring.SystemPrompter
     libqalculate # provides qalc for rofi-calc
     multimarkdown # to enable markdown-preview in doom emacs
   ];

@@ -4,6 +4,7 @@
   imports = [
     ./default-applications-mime.nix
     ./config-auth-agent.nix
+    ./config-secret-service.nix
     ./git.nix
     ./gtk.nix
     ./pkgs-core.nix

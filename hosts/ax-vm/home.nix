@@ -13,6 +13,7 @@
 
   defaultApplicationsMime.enable = true;
   configAuthAgent.enable = true;
+  configSecretService.enable = true;
   configGit.enable = true;
   configGtk.enable = true;
 

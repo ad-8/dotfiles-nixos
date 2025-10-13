@@ -24,8 +24,5 @@
         TimeoutStopSec = 10;
       };
     };
-
-    # https://wiki.nixos.org/wiki/Secret_Service
-    services.gnome-keyring.enable = true;
   };
 }
