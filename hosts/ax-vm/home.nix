@@ -12,6 +12,7 @@
   pkgsWm.enable = true;
 
   defaultApplicationsMime.enable = true;
+  configAuthAgent.enable = true;
   configGit.enable = true;
   configGtk.enable = true;
 
@@ -28,31 +29,5 @@
       btw = "echo 'home-manager seems to be working :)'";
     };
   };
-
-  # https://wiki.nixos.org/wiki/Polkit
-  systemd.user.services.polkit-gnome-authentication-agent-1 = {
-    Unit = {
-      Description = "polkit-gnome-authentication-agent-1";
-      Wants = [ "graphical-session.target" ];
-      After = [ "graphical-session.target" ];
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-    Service = {
-      Type = "simple";
-      ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-      Restart = "on-failure";
-      RestartSec = 1;
-      TimeoutStopSec = 10;
-    };
-  };
-
-  # https://wiki.nixos.org/wiki/Secret_Service
-  services.gnome-keyring.enable = true;
-
-  # this overwrote the config in ~/dotfiles (made backup like we set it up though)
-  # -> using existing config file for now 
-  # programs.fish.enable = true;
 }
 
