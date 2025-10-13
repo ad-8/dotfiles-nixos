@@ -9,11 +9,11 @@
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../configuration-core.nix
-    ../configuration-extra.nix
     ../ax-configs.nix
     ];
 
-    configPrinting.enable = false;
+    configExtra.enable = true;
+    configPrinting.enable = true;
 
     
     boot.initrd.luks.devices."luks-1101d87b-2380-4455-a516-1dda026f32e3".device = "/dev/disk/by-uuid/1101d87b-2380-4455-a516-1dda026f32e3";

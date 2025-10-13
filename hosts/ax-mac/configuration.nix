@@ -9,10 +9,10 @@
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../configuration-core.nix
-    ../configuration-extra.nix
     ../ax-configs.nix
     ];
 
+    configExtra.enable = true;
     configPrinting.enable = true;
 
 
