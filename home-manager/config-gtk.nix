@@ -11,8 +11,14 @@
       enable = true;
       # works -> see e.g. thunar
       theme = {
-        name = "Adwaita-dark";
-        package = pkgs.gnome-themes-extra;
+        # name = "Arc-Dark";
+        # package = pkgs.arc-theme;
+        # name = "Dracula";
+        # package = pkgs.dracula-theme;
+        name = "Nordic"; # or Nordic-darker
+        package = pkgs.nordic;
+        # name = "Yaru-dark";
+        # package = pkgs.yaru-theme;
       };
       # works -> see e.g. nm-applet tray icon
       iconTheme = {
