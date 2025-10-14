@@ -9,6 +9,7 @@
     home.packages = with pkgs; [
       # clojure-lsp # needed?
       babashka
+      bundix
       clojure
       gh
       jq
