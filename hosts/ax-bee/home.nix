@@ -34,6 +34,9 @@
     chezmoi
     libqalculate # provides qalc for rofi-calc
     multimarkdown # to enable markdown-preview in doom emacs
+
+    fooyin
+    jetbrains.ruby-mine
   ];
 
   programs.bash = {
