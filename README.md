@@ -19,8 +19,15 @@ not 100% sure, but this works so far
 - *switch* to apply them
 
 ### collect garbage
-1. `sudo nix-collect-garbage -d`
-2. `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac` (to remove the old generations from the boot menu)
+this deleted *all but* the current generation:
+
+a. `sudo nix-collect-garbage -d`
+
+*next time*, try this one:
+
+b. `sudo nix-collect-garbage --delete-older-than 10d`
+
+Finally run `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#<host>` to remove the old generations from the boot menu.
 
 
 ## GUI Installation with LUKS -> convert to flake config
