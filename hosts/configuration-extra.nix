@@ -83,11 +83,11 @@
       # Enable the OpenSSH daemon.
       # services.openssh.enable = true;
 
+      # The firewall is enabled by default on NixOS. Still, explicitly ensure it is enabled
+      networking.firewall.enable = true;
       # Open ports in the firewall.
       # networking.firewall.allowedTCPPorts = [ ... ];
       # networking.firewall.allowedUDPPorts = [ ... ];
-      # Or disable the firewall altogether.
-      # networking.firewall.enable = false;
   };
 }
 
