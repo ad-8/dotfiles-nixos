@@ -16,6 +16,7 @@
   configSecretService.enable = true;
   configGit.enable = true;
   configGtk.enable = true;
+  configQt.enable = true;
 
   home.stateVersion = "25.05";
   home.username = "ax";

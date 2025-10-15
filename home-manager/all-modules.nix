@@ -7,6 +7,7 @@
     ./config-git.nix
     ./config-gtk.nix
     ./config-secret-service.nix
+    ./config-qt.nix
     ./pkgs-core.nix
     ./pkgs-dev.nix
     ./pkgs-extra.nix
