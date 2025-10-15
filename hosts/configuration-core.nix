@@ -47,7 +47,7 @@
   services.xserver.enable = true;
 
   # display manager, window manager and shell
-  services.displayManager.ly.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
   programs.sway.enable = true; # needed a reboot to show up in the display manager
   programs.fish.enable = true;
   users.users.ax.shell = pkgs.fish;
