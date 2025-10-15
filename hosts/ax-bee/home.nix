@@ -6,7 +6,7 @@
   ];
 
   # https://github.com/vimjoyer/modularize-video (as seen in https://www.youtube.com/watch?v=vYc6IzKvAJQ)
-  # pkgsCore.enable = true; # enabled by default, see pkgs-bundle.nix
+  # pkgsCore.enable = true; # enabled by default, see all-modules.nix
   pkgsDev.enable = true;
   pkgsExtra.enable = true;
   pkgsGui.enable = true;

@@ -5,7 +5,7 @@
     ../../home-manager/all-modules.nix
   ];
 
-  # pkgsCore.enable = true; # enabled by default, see pkgs-bundle.nix
+  # pkgsCore.enable = true; # enabled by default, see all-modules.nix
   pkgsDev.enable = false;
   pkgsExtra.enable = false;
   pkgsGui.enable = false;
