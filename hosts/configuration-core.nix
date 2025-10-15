@@ -48,7 +48,7 @@
 
   # display manager, window manager and shell
   services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.displayManager.lightdm.greeters.slick.enable = true;
+  # services.xserver.displayManager.lightdm.greeters.slick.enable = true;
   programs.sway.enable = true; # needed a reboot to show up in the display manager
   programs.fish.enable = true;
   users.users.ax.shell = pkgs.fish;
