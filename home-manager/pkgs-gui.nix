@@ -7,6 +7,7 @@
 
   config = lib.mkIf config.pkgsGui.enable {
     home.packages = with pkgs; [
+      anki
       brave
       gimp3
       gnome-disk-utility
