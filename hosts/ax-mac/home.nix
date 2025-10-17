@@ -23,18 +23,6 @@
   home.username = "ax";
   home.homeDirectory = "/home/ax";
   home.packages = with pkgs; [
-    # TODO proton vpn setup
-    # protonvpn-cli # sadly, does not let me log in (API error)
-    # and gui doesn't remember credentials after logout/login (works after reboot again), even with those 3 pkgs below 
-    protonvpn-gui
-    python313Packages.protonvpn-nm-lib # ProtonVPN NetworkManager Library intended for every ProtonVPN service user
-    python313Packages.proton-keyring-linux # ProtonVPN core component to access Linux's keyring
-    python313Packages.proton-vpn-network-manager # Provides the necessary functionality for other ProtonVPN components to interact with NetworkManager
-
-    # other
-    chezmoi
-    libqalculate # provides qalc for rofi-calc
-    multimarkdown # to enable markdown-preview in doom emacs
   ];
 
   programs.bash = {

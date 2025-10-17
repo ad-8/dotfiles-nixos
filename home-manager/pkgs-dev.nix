@@ -12,6 +12,7 @@
       bundix
       clojure
       gh
+      jetbrains.ruby-mine
       jq
       leiningen
       rbenv
