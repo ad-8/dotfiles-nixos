@@ -31,7 +31,8 @@
           settings = {
             # The main layer, if you choose to declare it in Nix
             main = {
-              #capslock = "layer(control)"; # you might need to also enclose the key in quotes if it contains non-alphabetical symbols
+              # Maps capslock to escape when pressed and control when held.
+              capslock = "overload(control, esc)";
               leftalt = "leftmeta";
               leftmeta = "leftalt";
             };

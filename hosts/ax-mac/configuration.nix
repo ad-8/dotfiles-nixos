@@ -19,6 +19,22 @@
     boot.initrd.luks.devices."luks-f43e8971-1fb7-4d8c-be86-c8162a78d104".device = "/dev/disk/by-uuid/f43e8971-1fb7-4d8c-be86-c8162a78d104";
     networking.hostName = "ax-mac"; # Define your hostname.
 
+    services.keyd = {
+      enable = true;
+      keyboards = {
+        default = {
+          ids = [ "*" ];
+          settings = {
+            main = {
+              # Maps capslock to escape when pressed and control when held.
+              capslock = "overload(control, esc)";
+              # Remaps the escape key to capslock
+              # esc = "capslock";
+            };
+          };
+        };
+      };
+    };
 
     # laptop battery info via `upower --dump`
     services.upower.enable = true;
