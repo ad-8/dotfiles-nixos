@@ -19,6 +19,11 @@
     boot.initrd.luks.devices."luks-f43e8971-1fb7-4d8c-be86-c8162a78d104".device = "/dev/disk/by-uuid/f43e8971-1fb7-4d8c-be86-c8162a78d104";
     networking.hostName = "ax-mac"; # Define your hostname.
 
+    # ignore short presses of the power button entirely. Long-pressing your power button (5 seconds or longer)
+    # to do a hard reset is handled by your machine’s BIOS/EFI and thus still possible.
+    # (https://wiki.nixos.org/wiki/Systemd/logind)
+    services.logind.powerKey = "ignore"; # started working after a reboot
+
     services.keyd = {
       enable = true;
       keyboards = {
