@@ -28,6 +28,9 @@
     # thanks https://mynixos.com/nixpkgs/option/programs.light.enable
     programs.light.enable = true;
 
+    # ensure the client has the necessary NFS utilities installed
+    boot.supportedFilesystems = [ "nfs" ];
+
     # https://wiki.nixos.org/wiki/Syncthing
     services = {
       syncthing = {
