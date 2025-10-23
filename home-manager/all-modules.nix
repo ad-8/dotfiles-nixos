@@ -3,10 +3,10 @@
 {
   imports = [
     ./config-auth-agent.nix
-    ./config-default-applications-mime.nix
     ./config-git.nix
     ./config-gtk.nix
     ./config-megasync.nix
+    ./config-mime.nix
     ./config-qt.nix
     ./config-secret-service.nix
     ./pkgs-core.nix

@@ -17,10 +17,10 @@ let
 in
 {
   options = {
-    defaultApplicationsMime.enable = lib.mkEnableOption "Enable defaultApplicationsMime";
+    configMime.enable = lib.mkEnableOption "Enable configMime";
   };
 
-  config = lib.mkIf config.defaultApplicationsMime.enable {
+  config = lib.mkIf config.configMime.enable {
     xdg.mimeApps = {
       enable = true;
       defaultApplications = {

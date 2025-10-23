@@ -12,11 +12,11 @@
   pkgsGui.enable = true;
   pkgsWm.enable = true;
 
-  defaultApplicationsMime.enable = true;
   configAuthAgent.enable = true;
   configGit.enable = true;
   configGtk.enable = true;
   configMegasync.enable = true;
+  configMime.enable = true;
   configQt.enable = true;
   configSecretService.enable = true;
 
