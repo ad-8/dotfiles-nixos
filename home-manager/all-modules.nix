@@ -6,8 +6,9 @@
     ./config-default-applications-mime.nix
     ./config-git.nix
     ./config-gtk.nix
-    ./config-secret-service.nix
+    ./config-megasync.nix
     ./config-qt.nix
+    ./config-secret-service.nix
     ./pkgs-core.nix
     ./pkgs-dev.nix
     ./pkgs-extra.nix
