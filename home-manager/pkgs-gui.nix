@@ -20,6 +20,7 @@
       mpv
       pavucontrol
       picard
+      qalculate-gtk
       qbittorrent
       strawberry
       xfce.mousepad
