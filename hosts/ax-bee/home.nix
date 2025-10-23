@@ -15,7 +15,7 @@
   configAuthAgent.enable = true;
   configGit.enable = true;
   configGtk.enable = true;
-  configMegasync.enable = true;
+  configMegasync.enable = false;
   configMime.enable = true;
   configQt.enable = true;
   configSecretService.enable = true;

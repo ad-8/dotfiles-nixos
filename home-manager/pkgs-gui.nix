@@ -17,6 +17,7 @@
       kdePackages.okular
       keepassxc
       libreoffice-still
+      megasync
       mpv
       pavucontrol
       picard
