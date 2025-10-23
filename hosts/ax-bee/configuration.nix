@@ -45,6 +45,34 @@
       };
     };
 
+    # -----------------------------------------------------------------------------------------------
+    systemd.timers."ax-restic" = {
+      wantedBy = [ "timers.target" ];
+      timerConfig = {
+        # OnCalendar="*:0/1"; # every minute
+        # OnCalendar = "*-*-* *:01:00";  # every hour at minute 1, second 0
+        OnCalendar="*-*-* *:00/30:00"; # every 30 minutes
+        Unit = "ax-restic.service";
+      };
+    };
+
+    systemd.services."ax-restic" = {
+      description = "Restic backup service";
+      wantedBy = [ "multi-user.target" ];
+      # the $PATH is almost empty when running a systemd service, so we add to it
+      path = [
+        pkgs.ruby
+        pkgs.restic
+      ];
+      serviceConfig = {
+        Type = "oneshot";
+        User = "ax";
+        ExecStart = "${pkgs.ruby}/bin/ruby /home/ax/x/ax-bee-restic.rb";
+        RemainAfterExit = false; # see nixos wiki
+      };
+    };
+    # -----------------------------------------------------------------------------------------------
+
     programs.steam.enable = true;
 
     # https://wiki.nixos.org/wiki/Virt-manager
