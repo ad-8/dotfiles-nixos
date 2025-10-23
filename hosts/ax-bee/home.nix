@@ -24,6 +24,7 @@
   home.username = "ax";
   home.homeDirectory = "/home/ax";
   home.packages = with pkgs; [
+    megasync
   ];
 
   programs.bash = {

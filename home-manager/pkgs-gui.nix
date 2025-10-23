@@ -17,7 +17,7 @@
       kdePackages.okular
       keepassxc
       libreoffice-still
-      megasync
+      # megasync # this compiles from src!
       mpv
       pavucontrol
       picard
