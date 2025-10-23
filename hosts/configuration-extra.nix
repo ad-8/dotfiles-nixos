@@ -73,6 +73,8 @@
       #  wget
       clamav
       ffmpeg-full
+      restic
+      rclone
     ];
 
     services.clamav.daemon.enable = true;
