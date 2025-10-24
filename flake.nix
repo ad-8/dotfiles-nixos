@@ -35,9 +35,24 @@
     };
   in {
     nixosConfigurations = {
-      ax-mac = mkConfig { hostname = "ax-mac"; username = "ax"; nixpkgs = nixpkgs-stable; home-manager = home-manager-stable; };
-      ax-bee = mkConfig { hostname = "ax-bee"; username = "ax"; nixpkgs = nixpkgs-stable; home-manager = home-manager-stable; };
-      ax-vm = mkConfig { hostname = "ax-vm"; username = "ax"; nixpkgs = nixpkgs-stable; home-manager = home-manager-stable; };
+      ax-mac = mkConfig {
+        hostname = "ax-mac";
+        username = "ax";
+        nixpkgs = nixpkgs-stable;
+        home-manager = home-manager-stable;
+      };
+      ax-bee = mkConfig {
+        hostname = "ax-bee";
+        username = "ax";
+        nixpkgs = nixpkgs-stable;
+        home-manager = home-manager-stable;
+      };
+      ax-vm = mkConfig {
+        hostname = "ax-vm";
+        username = "ax";
+        nixpkgs = nixpkgs-stable;
+        home-manager = home-manager-stable;
+      };
     };
   };
 }
