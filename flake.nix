@@ -2,17 +2,17 @@
 	description = "foo";
 
 	inputs = {
-		nixpkgs.url = "nixpkgs/nixos-25.05";
-		home-manager = {
+		nixpkgs-stable.url = "nixpkgs/nixos-25.05";
+		home-manager-stable = {
 			url = "github:nix-community/home-manager/release-25.05";
-			inputs.nixpkgs.follows = "nixpkgs";
+			inputs.nixpkgs.follows = "nixpkgs-stable";
 		};
 	};
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs-stable, home-manager-stable, ... }:
   let
     system = "x86_64-linux";
-    mkConfig = { hostname, username }:
+    mkConfig = { hostname, username, nixpkgs, home-manager }:
     nixpkgs.lib.nixosSystem {
       inherit system;
       modules = [
@@ -30,9 +30,9 @@
     };
   in {
     nixosConfigurations = {
-      ax-mac = mkConfig { hostname = "ax-mac"; username = "ax"; };
-      ax-bee = mkConfig { hostname = "ax-bee"; username = "ax"; };
-      ax-vm = mkConfig { hostname = "ax-vm"; username = "ax"; };
+      ax-mac = mkConfig { hostname = "ax-mac"; username = "ax"; nixpkgs = nixpkgs-stable; home-manager = home-manager-stable; };
+      ax-bee = mkConfig { hostname = "ax-bee"; username = "ax"; nixpkgs = nixpkgs-stable; home-manager = home-manager-stable; };
+      ax-vm = mkConfig { hostname = "ax-vm"; username = "ax"; nixpkgs = nixpkgs-stable; home-manager = home-manager-stable; };
     };
   };
 }
