@@ -12,7 +12,7 @@
   outputs = { self, nixpkgs, home-manager, ... }:
   let
     system = "x86_64-linux";
-    mkHost = { hostname, username }:
+    mkConfig = { hostname, username }:
     nixpkgs.lib.nixosSystem {
       inherit system;
       modules = [
@@ -30,9 +30,9 @@
     };
   in {
     nixosConfigurations = {
-      ax-mac = mkHost { hostname = "ax-mac"; username = "ax"; };
-      ax-bee = mkHost { hostname = "ax-bee"; username = "ax"; };
-      ax-vm = mkHost { hostname = "ax-vm"; username = "ax"; };
+      ax-mac = mkConfig { hostname = "ax-mac"; username = "ax"; };
+      ax-bee = mkConfig { hostname = "ax-bee"; username = "ax"; };
+      ax-vm = mkConfig { hostname = "ax-vm"; username = "ax"; };
     };
   };
 }
