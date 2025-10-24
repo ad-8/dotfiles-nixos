@@ -14,6 +14,7 @@
 
     configExtra.enable = true;
     configPrinting.enable = true;
+    configVirtman.enable = true;
 
 
     boot.initrd.luks.devices."luks-1101d87b-2380-4455-a516-1dda026f32e3".device = "/dev/disk/by-uuid/1101d87b-2380-4455-a516-1dda026f32e3";
@@ -75,11 +76,6 @@
 
     programs.steam.enable = true;
 
-    # https://wiki.nixos.org/wiki/Virt-manager
-    # - enable network: `sudo virsh net-autostart default`
-    # - start network for current boot: `sudo virsh net-start default`
-    virtualisation.libvirtd.enable = true;
-    programs.virt-manager.enable = true;
 
 
     # This value determines the NixOS release from which the default

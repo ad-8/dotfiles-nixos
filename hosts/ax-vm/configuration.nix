@@ -5,7 +5,12 @@
     [ 
     ./hardware-configuration.nix
     ../configuration-core.nix
+    ../ax-configs.nix
     ];
+
+    configExtra.enable = false;
+    configPrinting.enable = false;
+    configVirtman.enable = false;
 
 
     # TODO if needed, update the following line from /etc/nixos/configuration.nix
