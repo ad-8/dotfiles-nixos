@@ -9,7 +9,8 @@
 		};
 	};
 
-  outputs = { self, nixpkgs, home-manager, ... }: let
+  outputs = { self, nixpkgs, home-manager, ... }:
+  let
     system = "x86_64-linux";
     mkHost = { hostname, username }:
     nixpkgs.lib.nixosSystem {
