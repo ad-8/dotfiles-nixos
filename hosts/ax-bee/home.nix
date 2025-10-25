@@ -24,7 +24,9 @@
   home.username = "ax";
   home.homeDirectory = "/home/ax";
   home.packages = with pkgs; [
+    ghostty
     megasync
+    yazi
   ];
 
   programs.bash = {
