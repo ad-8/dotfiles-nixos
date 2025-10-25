@@ -33,6 +33,14 @@
         }
       ];
     };
+    # TODO refactor mkConfig: make home-manager optional
+    mkConfigServer = { hostname, nixpkgs }:
+    nixpkgs.lib.nixosSystem {
+      inherit system;
+      modules = [
+        ./hosts/${hostname}/configuration.nix
+      ];
+    };
   in {
     nixosConfigurations = {
       ax-mac = mkConfig {
