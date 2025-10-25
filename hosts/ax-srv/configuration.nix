@@ -35,6 +35,9 @@
 
 
     environment.systemPackages = with pkgs; [
+      htop
+      podman-compose
+      wget
     ];
 
 
