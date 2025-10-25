@@ -26,6 +26,7 @@
   home.packages = with pkgs; [
     ghostty
     megasync
+    neovim
     yazi
   ];
 
