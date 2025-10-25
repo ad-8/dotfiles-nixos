@@ -61,6 +61,10 @@
         nixpkgs = nixpkgs-stable;
         home-manager = home-manager-stable;
       };
+      ax-srv = mkConfigServer {
+        hostname = "ax-srv";
+        nixpkgs = nixpkgs-stable;
+      };
     };
   };
 }
