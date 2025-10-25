@@ -24,7 +24,6 @@
   home.username = "ax";
   home.homeDirectory = "/home/ax";
   home.packages = with pkgs; [
-    neovim
   ];
 
   programs.bash = {

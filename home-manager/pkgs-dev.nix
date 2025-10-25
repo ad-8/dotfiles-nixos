@@ -18,6 +18,8 @@
       rbenv
       ruby_3_4
       vscodium
+      neovim
+      lazygit
     ];
   };
 }
