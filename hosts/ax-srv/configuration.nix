@@ -13,6 +13,27 @@
     networking.hostName = "ax-srv"; # Define your hostname.
 
 
+    services.openssh = {
+      enable = true;
+    };
+
+    virtualisation = {
+      containers.enable = true;
+      podman = {
+        enable = true;
+        dockerCompat = true;
+        defaultNetwork.settings.dns_enabled = true; # Required for containers under podman-compose to be able to talk to each other.
+      };
+    };
+
+
+    # The firewall is enabled by default on NixOS. Still, explicitly ensure it is enabled
+    networking.firewall.enable = true;
+    # Open ports in the firewall.
+    networking.firewall.allowedTCPPorts = [ 2283 ];
+    # networking.firewall.allowedUDPPorts = [ ... ];
+
+
     environment.systemPackages = with pkgs; [
     ];
 
