@@ -43,30 +43,10 @@
     ];
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # display manager, window manager and shell
-  services.xserver.displayManager.lightdm.enable = true;
-  # services.xserver.displayManager.lightdm.greeters.slick.enable = true;
-  programs.sway.enable = true; # needed a reboot to show up in the display manager
   programs.fish.enable = true;
   users.users.ax.shell = pkgs.fish;
 
   security.sudo.extraConfig = ''
     Defaults timestamp_timeout=30
   '';
-
-  # Some programs are installed like this, don't know why yet
-  programs.firefox.enable = true;
-  programs.java.enable = true;
-  # https://wiki.nixos.org/wiki/Thunar
-  programs.thunar.enable = true;
-  programs.xfconf.enable = true;
-  services.gvfs.enable = true; # Mount, trash, and other functionalities
-  services.tumbler.enable = true; # Thumbnail support for images
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.hack
-  ];
 }
