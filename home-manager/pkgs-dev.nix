@@ -7,10 +7,10 @@
 
   config = lib.mkIf config.pkgsDev.enable {
     home.packages = with pkgs; [
-      # clojure-lsp # needed?
       babashka
       bundix
       clojure
+      clojure-lsp
       gh
       jetbrains.ruby-mine
       jq
