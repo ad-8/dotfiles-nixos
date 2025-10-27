@@ -20,6 +20,7 @@
       vscodium
       neovim
       lazygit
+      semgrep # needed for clojure lsp and others in emacs
     ];
   };
 }
