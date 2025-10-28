@@ -15,11 +15,8 @@
       jetbrains.ruby-mine
       jq
       leiningen
-      rbenv
       ruby_3_4
       vscodium
-      neovim
-      lazygit
       semgrep # needed for clojure lsp and others in emacs
     ];
   };
