@@ -18,6 +18,7 @@
   configMime.enable = true;
   configQt.enable = true;
   configSecretService.enable = true;
+  configWebApps.enable = false;
 
   home.stateVersion = "25.05";
   home.username = "ax";
