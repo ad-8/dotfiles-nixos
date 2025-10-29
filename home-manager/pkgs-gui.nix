@@ -24,6 +24,7 @@
       qalculate-gtk
       qbittorrent
       strawberry
+      ungoogled-chromium
       xfce.mousepad
       xfce.ristretto
 
