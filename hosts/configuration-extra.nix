@@ -106,7 +106,8 @@
     services.clamav.daemon.enable = true;
     services.clamav.updater.enable = true;
 
-    services.emacs.enable = true;
+    # TODO failed to start the daemon after nixos-rebuild
+    # services.emacs.enable = true;
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
