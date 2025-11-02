@@ -40,7 +40,7 @@ Tested with GNOME as DE in LiveDVD+Installation, then converted to the OG flake-
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 ```
 
-Also add `git` and `vim` to pkgs for the next steps.
+Also add `git` and `vim` to `environment.systemPackages` for the next steps.
 
 2. `sudo nixos-rebuild switch`
 
