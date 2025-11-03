@@ -16,6 +16,7 @@
       pciutils # lspci and more
       pdftk
       smartmontools
+      steam-run
       unzip # no zip, use tar xD
       usbutils # lsusb and more
     ];
