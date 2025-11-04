@@ -19,6 +19,7 @@
       steam-run
       unzip # no zip, use tar xD
       usbutils # lsusb and more
+      vips # fast image processing library, used e.g. in emacs dirvish
     ];
   };
 }
