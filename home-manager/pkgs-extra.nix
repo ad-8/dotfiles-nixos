@@ -15,6 +15,7 @@
       multimarkdown # to enable markdown-preview in doom emacs
       pciutils # lspci and more
       pdftk
+      poppler-utils # contains pdftoppm, needed by emacs dirvish
       smartmontools
       steam-run
       unzip # no zip, use tar xD
