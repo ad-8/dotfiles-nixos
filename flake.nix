@@ -17,11 +17,9 @@
   outputs = { self, nixpkgs-stable, nixpkgs-unstable, home-manager-stable, home-manager-unstable, ... }:
   let
     system = "x86_64-linux";
-    mkConfig = { hostname, username, nixpkgs, home-manager }:
-    nixpkgs.lib.nixosSystem {
-      inherit system;
-      modules = [
-        ./hosts/${hostname}/configuration.nix
+    mkConfig = { hostname, username ? "ax", nixpkgs ? nixpkgs-stable , home-manager ? home-manager-stable}:
+    let
+      hm = if home-manager != null then [
         home-manager.nixosModules.home-manager
         {
           home-manager = {
@@ -31,40 +29,20 @@
             backupFileExtension = "backup";
           };
         }
-      ];
-    };
-    # TODO refactor mkConfig: make home-manager optional
-    mkConfigServer = { hostname, nixpkgs }:
+      ] else [];
+    in
     nixpkgs.lib.nixosSystem {
       inherit system;
       modules = [
         ./hosts/${hostname}/configuration.nix
-      ];
+      ] ++ hm;
     };
   in {
     nixosConfigurations = {
-      ax-mac = mkConfig {
-        hostname = "ax-mac";
-        username = "ax";
-        nixpkgs = nixpkgs-stable;
-        home-manager = home-manager-stable;
-      };
-      ax-bee = mkConfig {
-        hostname = "ax-bee";
-        username = "ax";
-        nixpkgs = nixpkgs-stable;
-        home-manager = home-manager-stable;
-      };
-      ax-vm = mkConfig {
-        hostname = "ax-vm";
-        username = "ax";
-        nixpkgs = nixpkgs-stable;
-        home-manager = home-manager-stable;
-      };
-      ax-srv = mkConfigServer {
-        hostname = "ax-srv";
-        nixpkgs = nixpkgs-stable;
-      };
+      ax-mac = mkConfig { hostname = "ax-mac"; };
+      ax-bee = mkConfig { hostname = "ax-bee"; };
+      ax-vm = mkConfig { hostname = "ax-vm"; };
+      ax-srv = mkConfig { hostname = "ax-srv"; home-manager = null; };
     };
   };
 }
