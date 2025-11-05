@@ -4,14 +4,8 @@
   inputs = {
 	  nixpkgs-stable.url = "nixpkgs/nixos-25.05";
 	  nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
-	  home-manager-stable = {
-		  url = "github:nix-community/home-manager/release-25.05";
-		  inputs.nixpkgs.follows = "nixpkgs-stable";
-	  };
-	  home-manager-unstable = {
-		  url = "github:nix-community/home-manager/master";
-		  inputs.nixpkgs.follows = "nixpkgs-unstable";
-	  };
+	  home-manager-stable = { url = "github:nix-community/home-manager/release-25.05"; inputs.nixpkgs.follows = "nixpkgs-stable"; };
+	  home-manager-unstable = { url = "github:nix-community/home-manager/master"; inputs.nixpkgs.follows = "nixpkgs-unstable"; };
   };
 
   outputs = { self, nixpkgs-stable, nixpkgs-unstable, home-manager-stable, home-manager-unstable, ... }:
