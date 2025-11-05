@@ -32,7 +32,14 @@
     environment.systemPackages = with pkgs; [
     ];
 
-    services.xserver.desktopManager.xfce.enable = true;
+    services.xserver = {
+      enable = true;
+      desktopManager = {
+        xterm.enable = false;
+        xfce.enable = true;
+      };
+    };
+    services.displayManager.defaultSession = "xfce";
 
     system.stateVersion = "25.05"; # Did you read the comment?
 }
