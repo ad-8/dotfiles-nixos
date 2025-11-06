@@ -47,6 +47,7 @@
     };
 
     # -----------------------------------------------------------------------------------------------
+    # TODO this could be one line in the systemCronJobs vector below ...
     systemd.timers."ax-restic" = {
       wantedBy = [ "timers.target" ];
       timerConfig = {
@@ -73,6 +74,15 @@
       };
     };
     # -----------------------------------------------------------------------------------------------
+
+    services.cron = {
+      enable = true;
+      systemCronJobs = [
+        # download daily wallpaper
+        "0 9,10,11 * * *     ax     . /etc/profile; nix develop ~/x --command ruby ~/x/bing_wallpaper_dl.rb >> ~/bing.log 2>&1"
+      ];
+    };
+
 
     programs.steam.enable = true;
 
