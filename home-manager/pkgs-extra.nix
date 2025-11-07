@@ -7,22 +7,26 @@
 
   config = lib.mkIf config.pkgsExtra.enable {
     home.packages = with pkgs; [
+      bluetui
       chezmoi
-      ffmpegthumbnailer # emacs dirvish
       imagemagick
       inxi # Full featured CLI system information tool
       libqalculate # provides qalc for rofi-calc
       lm_sensors # provides `sensors` cmd to show cpu temp etc.
-      mediainfo # used in emacs dirvish
       multimarkdown # to enable markdown-preview in doom emacs
+      nh
       pciutils # lspci and more
       pdftk
-      poppler-utils # contains pdftoppm, needed by emacs dirvish
       smartmontools
       steam-run
       unzip # no zip, use tar xD
       usbutils # lsusb and more
-      vips # fast image processing library, used e.g. in emacs dirvish
+
+      # emacs dirvish
+      ffmpegthumbnailer
+      mediainfo
+      poppler-utils # contains pdftoppm, needed by emacs dirvish
+      vips
 
       # screenshot setup
       grim
