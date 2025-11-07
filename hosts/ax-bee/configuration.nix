@@ -86,6 +86,14 @@
 
     programs.steam.enable = true;
 
+    # -----------------------------------------------------------------------------------------------
+    # distrobox
+    virtualisation.podman = {
+      enable = true;
+      dockerCompat = true;
+    };
+    environment.systemPackages = [ pkgs.distrobox ];
+    # -----------------------------------------------------------------------------------------------
 
 
     # This value determines the NixOS release from which the default
