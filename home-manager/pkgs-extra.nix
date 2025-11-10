@@ -14,7 +14,6 @@
       libqalculate # provides qalc for rofi-calc
       lm_sensors # provides `sensors` cmd to show cpu temp etc.
       multimarkdown # to enable markdown-preview in doom emacs
-      nh
       pciutils # lspci and more
       pdftk
       smartmontools

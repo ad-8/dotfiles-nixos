@@ -63,7 +63,6 @@
       wantedBy = [ "multi-user.target" ];
       # the $PATH is almost empty when running a systemd service, so we add to it
       path = [
-        pkgs.ruby
         pkgs.restic
       ];
       serviceConfig = {

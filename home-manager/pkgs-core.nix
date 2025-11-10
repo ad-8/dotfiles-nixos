@@ -18,6 +18,7 @@
       fzf
       htop
       ncdu
+      nh
       nnn
       psmisc # provides killall
       ripgrep
@@ -28,6 +29,10 @@
       tree
       wget
       zoxide
+
+      # for our scripts and running the systems, we use
+      babashka
+      ruby_3_4
     ];
   };
 }
