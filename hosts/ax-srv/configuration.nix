@@ -34,6 +34,7 @@
 
 
     environment.systemPackages = with pkgs; [
+      emacs
       htop
       podman-compose
       wget
@@ -50,6 +51,7 @@
       ncdu
       fd
       stow
+      ripgrep
     ];
 
 
