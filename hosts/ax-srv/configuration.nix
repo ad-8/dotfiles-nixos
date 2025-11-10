@@ -53,6 +53,9 @@
       stow
       ripgrep
       fzf
+
+      babashka
+      ruby_3_4
     ];
 
 
