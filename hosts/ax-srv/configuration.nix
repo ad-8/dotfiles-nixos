@@ -29,7 +29,7 @@
     # The firewall is enabled by default on NixOS. Still, explicitly ensure it is enabled
     networking.firewall.enable = true;
     # Open ports in the firewall.
-    networking.firewall.allowedTCPPorts = [ 2283 ];
+    networking.firewall.allowedTCPPorts = [ 2283 9090 9091 ];
     # networking.firewall.allowedUDPPorts = [ ... ];
 
 
@@ -42,6 +42,14 @@
       fastfetch
       delta
       tokei
+      shiori # TODO evaluate (pocket/read-it-later replacement)
+      tmux
+      starship
+      zoxide
+      nnn
+      ncdu
+      fd
+      stow
     ];
 
 
