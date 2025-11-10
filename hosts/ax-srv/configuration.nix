@@ -35,27 +35,32 @@
 
     environment.systemPackages = with pkgs; [
       emacs
-      htop
-      podman-compose
-      wget
       vlock
-      gh
-      fastfetch
-      delta
-      tokei
-      shiori # TODO evaluate (pocket/read-it-later replacement)
-      tmux
-      starship
-      zoxide
-      nnn
-      ncdu
-      fd
-      stow
-      ripgrep
-      fzf
 
+      # tools
+      delta
+      fastfetch
+      fd
+      fzf
+      gh
+      htop
+      ncdu
+      nnn
+      ripgrep
+      starship
+      stow
+      tmux
+      tokei
+      wget
+      zoxide
+
+      # code
       babashka
       ruby_3_4
+      
+      # selfhosting
+      podman-compose
+      shiori # TODO evaluate (pocket/read-it-later replacement)
     ];
 
 
