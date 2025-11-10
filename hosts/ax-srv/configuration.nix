@@ -52,6 +52,7 @@
       fd
       stow
       ripgrep
+      fzf
     ];
 
 
