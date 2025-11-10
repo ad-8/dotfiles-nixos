@@ -28,7 +28,7 @@
 
     # The firewall is enabled by default on NixOS. Still, explicitly ensure it is enabled
     networking.firewall.enable = true;
-    # Open ports in the firewall.
+    # Open ports in the firewall: [immich, linkding, shiori]
     networking.firewall.allowedTCPPorts = [ 2283 9090 9091 ];
     # networking.firewall.allowedUDPPorts = [ ... ];
 
@@ -54,6 +54,13 @@
       ripgrep
       fzf
     ];
+
+
+    # TODO why bother with separating pkgs?
+    users.users.ax = {
+      packages = with pkgs; [
+      ];
+    };
 
 
     system.stateVersion = "25.05"; # Did you read the comment?
