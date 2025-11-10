@@ -12,6 +12,9 @@
     networking.hostName = "ax-fuji";
 
 
+    # To ensure the client has the necessary NFS utilities installed:
+    boot.supportedFilesystems = [ "nfs" ];
+ 
     services.openssh = {
       enable = true;
     };
@@ -39,6 +42,7 @@
 
       # tools
       delta
+      eza
       fastfetch
       fd
       fzf
@@ -53,6 +57,8 @@
       tokei
       wget
       zoxide
+
+      restic
 
       # code
       babashka
