@@ -17,6 +17,7 @@
       kdePackages.okular
       keepassxc
       libreoffice-still
+      localsend
       # megasync # this compiles from src!
       mpv
       pavucontrol
