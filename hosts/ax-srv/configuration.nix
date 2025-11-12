@@ -12,8 +12,7 @@
     networking.hostName = "ax-fuji";
 
 
-    # To ensure the client has the necessary NFS utilities installed:
-    boot.supportedFilesystems = [ "nfs" ];
+    boot.supportedFilesystems = [ "nfs" ]; # installs NFS utilities for the client
  
     services.openssh = {
       enable = true;
