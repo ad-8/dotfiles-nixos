@@ -20,6 +20,7 @@
       steam-run
       unzip # no zip, use tar xD
       usbutils # lsusb and more
+      gum
 
       # emacs dirvish
       ffmpegthumbnailer
