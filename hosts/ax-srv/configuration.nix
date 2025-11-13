@@ -13,7 +13,7 @@
 
 
     boot.supportedFilesystems = [ "nfs" ]; # installs NFS utilities for the client
- 
+
     services.openssh = {
       enable = true;
     };
@@ -62,7 +62,7 @@
       # code
       babashka
       ruby_3_4
-      
+
       # selfhosting
       podman-compose
       shiori # TODO evaluate (pocket/read-it-later replacement)
@@ -72,6 +72,14 @@
     # TODO why bother with separating pkgs?
     users.users.ax = {
       packages = with pkgs; [
+      ];
+    };
+
+
+    services.cron = {
+      enable = true;
+      systemCronJobs = [
+        "* * * * *     ax     . /etc/profile; ruby $HOME/x/ax-srv-backup-linkding.rb >> ~/cron.log 2>&1"
       ];
     };
 
