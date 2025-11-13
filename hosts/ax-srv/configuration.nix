@@ -65,7 +65,6 @@
 
       # selfhosting
       podman-compose
-      shiori # TODO evaluate (pocket/read-it-later replacement)
     ];
 
 
