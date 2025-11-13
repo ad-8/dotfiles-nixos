@@ -51,6 +51,7 @@
     # display manager, window manager and shell
     services.xserver.displayManager.lightdm = {
       enable = true;
+      greeters.gtk.enable = true;
       extraConfig = ''
         clock-format =  %a, %d.%m.    %H:%M
         indicators = ~session;~spacer;~clock;~spacer;~power
