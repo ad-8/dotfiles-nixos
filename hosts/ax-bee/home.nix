@@ -27,7 +27,6 @@
   home.packages = with pkgs; [
     ghostty
     megasync
-    yazi
   ];
 
   programs.bash = {
