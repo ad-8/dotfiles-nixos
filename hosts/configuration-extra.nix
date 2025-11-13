@@ -49,7 +49,14 @@
     # Enable the X11 windowing system.
     services.xserver.enable = true;
     # display manager, window manager and shell
-    services.xserver.displayManager.lightdm.enable = true;
+    services.xserver.displayManager.lightdm = {
+      enable = true;
+      extraConfig = ''
+        clock-format =  %a, %d.%m.    %H:%M
+        indicators = ~session;~spacer;~clock;~spacer;~power
+        font-name = Hack Nerd Font Regular 12
+      '';
+    };
     # services.xserver.displayManager.lightdm.greeters.slick.enable = true;
     programs.sway.enable = true; # needed a reboot to show up in the display manager
     # -------------------------------------
