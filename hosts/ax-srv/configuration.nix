@@ -78,8 +78,8 @@
     services.cron = {
       enable = true;
       systemCronJobs = [
-        "10 3 * * *     ax     . /etc/profile; ruby $HOME/x/ax-srv-backup-immich.rb >> ~/cron1.log 2>&1"
-        "20 3 * * *     ax     . /etc/profile; ruby $HOME/x/ax-srv-backup-linkding.rb >> ~/cron.log 2>&1"
+        "10 3 * * *     ax     . /etc/profile; ruby $HOME/x/ax-srv-backup-immich.rb >> ~/cron-immich.log 2>&1"
+        "20 3 * * *     ax     . /etc/profile; ruby $HOME/x/ax-srv-backup-linkding.rb >> ~/cron-linkding.log 2>&1"
       ];
     };
 
