@@ -18,7 +18,6 @@
       libnotify
       networkmanagerapplet
       playerctl
-      rofi-calc
       rofi-wayland
       sct
       swaybg
