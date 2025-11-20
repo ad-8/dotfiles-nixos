@@ -9,30 +9,8 @@
 
 
     boot.initrd.luks.devices."luks-2fc19056-a600-4e50-8de6-47b442b623c9".device = "/dev/disk/by-uuid/2fc19056-a600-4e50-8de6-47b442b623c9";
-    networking.hostName = "ax-fuji";
-
-
     boot.supportedFilesystems = [ "nfs" ]; # installs NFS utilities for the client
-
-    services.openssh = {
-      enable = true;
-    };
-
-    virtualisation = {
-      containers.enable = true;
-      podman = {
-        enable = true;
-        dockerCompat = true;
-        defaultNetwork.settings.dns_enabled = true; # Required for containers under podman-compose to be able to talk to each other.
-      };
-    };
-
-
-    # The firewall is enabled by default on NixOS. Still, explicitly ensure it is enabled
-    networking.firewall.enable = true;
-    # Open ports in the firewall: [immich, linkding]
-    networking.firewall.allowedTCPPorts = [ 2283 9090 ];
-    # networking.firewall.allowedUDPPorts = [ ... ];
+    networking.hostName = "ax-fuji";
 
 
     environment.systemPackages = with pkgs; [
@@ -76,22 +54,40 @@
     };
 
 
-    services.cron = {
-      enable = true;
-      systemCronJobs = [
-        "10 3 * * *     ax     . /etc/profile; ruby $HOME/x/ax-srv-backup-immich.rb >> ~/cron-immich.log 2>&1"
-        "20 3 * * *     ax     . /etc/profile; ruby $HOME/x/ax-srv-backup-linkding.rb >> ~/cron-linkding.log 2>&1"
-      ];
+    networking.firewall.enable = true; # enabled by default, still enable explicitly
+    networking.firewall.allowedTCPPorts = [ 2283 9090 ]; # immich, linkding
+    # networking.firewall.allowedUDPPorts = [ ... ];
+
+
+    services = {
+      cron = {
+        enable = true;
+        systemCronJobs = [
+          "10 3 * * *     ax     . /etc/profile; ruby $HOME/x/ax-srv-backup-immich.rb >> ~/cron-immich.log 2>&1"
+          "20 3 * * *     ax     . /etc/profile; ruby $HOME/x/ax-srv-backup-linkding.rb >> ~/cron-linkding.log 2>&1"
+        ];
+      };
+      openssh = {
+        enable = true;
+      };
+      syncthing = {
+        enable = true;
+        openDefaultPorts = true;
+        group = "users";
+        user = "ax";
+        dataDir = "/home/ax/syncthing"; # Default folder for new synced folders
+        configDir = "/home/ax/.config/syncthing"; # Folder for Syncthing's settings and keys
+      };
     };
 
 
-    services.syncthing = {
-      enable = true;
-      openDefaultPorts = true;
-      group = "users";
-      user = "ax";
-      dataDir = "/home/ax/syncthing"; # Default folder for new synced folders
-      configDir = "/home/ax/.config/syncthing"; # Folder for Syncthing's settings and keys
+    virtualisation = {
+      containers.enable = true;
+      podman = {
+        enable = true;
+        dockerCompat = true;
+        defaultNetwork.settings.dns_enabled = true; # Required for containers under podman-compose to be able to talk to each other.
+      };
     };
 
 
