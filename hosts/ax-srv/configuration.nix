@@ -65,6 +65,8 @@
         systemCronJobs = [
           "10 3 * * *     ax     . /etc/profile; ruby $HOME/x/ax-srv-backup-immich.rb >> ~/cron-immich.log 2>&1"
           "20 3 * * *     ax     . /etc/profile; ruby $HOME/x/ax-srv-backup-linkding.rb >> ~/cron-linkding.log 2>&1"
+          # download daily wallpaper
+          "0 9,10,11 * * *     ax     . /etc/profile; nix develop ~/x --command ruby ~/x/bing_wallpaper_dl.rb >> ~/bing.log 2>&1"
         ];
       };
       openssh = {

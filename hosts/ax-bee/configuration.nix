@@ -74,13 +74,11 @@
     };
     # -----------------------------------------------------------------------------------------------
 
-    services.cron = {
-      enable = true;
-      systemCronJobs = [
-        # download daily wallpaper
-        "0 9,10,11 * * *     ax     . /etc/profile; nix develop ~/x --command ruby ~/x/bing_wallpaper_dl.rb >> ~/bing.log 2>&1"
-      ];
-    };
+    # services.cron = {
+    #   enable = true;
+    #   systemCronJobs = [
+    #   ];
+    # };
 
 
     programs.steam.enable = true;
