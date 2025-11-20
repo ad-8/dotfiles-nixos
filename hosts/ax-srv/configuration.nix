@@ -30,8 +30,8 @@
 
     # The firewall is enabled by default on NixOS. Still, explicitly ensure it is enabled
     networking.firewall.enable = true;
-    # Open ports in the firewall: [immich, linkding, shiori]
-    networking.firewall.allowedTCPPorts = [ 2283 9090 9091 ];
+    # Open ports in the firewall: [immich, linkding]
+    networking.firewall.allowedTCPPorts = [ 2283 9090 ];
     # networking.firewall.allowedUDPPorts = [ ... ];
 
 
@@ -39,7 +39,7 @@
       emacs
       vlock
 
-      # tools
+      # cli tools
       delta
       eza
       fastfetch
@@ -57,6 +57,7 @@
       wget
       zoxide
 
+      # backup
       restic
 
       # code
