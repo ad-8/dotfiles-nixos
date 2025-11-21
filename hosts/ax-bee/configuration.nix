@@ -68,7 +68,7 @@
       serviceConfig = {
         Type = "oneshot";
         User = "ax";
-        ExecStart = "${pkgs.ruby}/bin/ruby /home/ax/x/ax-bee-restic.rb";
+        ExecStart = "${pkgs.babashka}/bin/bb /home/ax/x/ax_bee_restic.clj";
         RemainAfterExit = false; # see nixos wiki
       };
     };
