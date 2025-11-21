@@ -74,11 +74,12 @@
     };
     # -----------------------------------------------------------------------------------------------
 
-    # services.cron = {
-    #   enable = true;
-    #   systemCronJobs = [
-    #   ];
-    # };
+    services.cron = {
+      enable = true;
+      systemCronJobs = [
+          "5 */2 * * *     ax     . /etc/profile; ruby $HOME/x/ax-bee-restic-b2.rb >> ~/restic.log 2>&1"
+      ];
+    };
 
 
     programs.steam.enable = true;
