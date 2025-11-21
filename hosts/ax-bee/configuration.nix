@@ -68,7 +68,7 @@
       serviceConfig = {
         Type = "oneshot";
         User = "ax";
-        ExecStart = "${pkgs.babashka}/bin/bb /home/ax/x/ax_bee_restic.clj";
+        ExecStart = "${pkgs.babashka}/bin/bb /home/ax/x/backup/ax_bee_restic_mega.clj";
         RemainAfterExit = false; # see nixos wiki
       };
     };
@@ -77,7 +77,7 @@
     services.cron = {
       enable = true;
       systemCronJobs = [
-          "5 */2 * * *     ax     . /etc/profile; ruby $HOME/x/ax-bee-restic-b2.rb >> ~/restic.log 2>&1"
+          "5 */2 * * *     ax     . /etc/profile; ruby $HOME/x/backup/ax_bee_restic_b2.rb >> ~/restic.log 2>&1"
       ];
     };
 
