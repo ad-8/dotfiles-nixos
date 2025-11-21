@@ -36,7 +36,7 @@
       ax-mac = mkConfig { hostname = "ax-mac"; };
       ax-bee = mkConfig { hostname = "ax-bee"; };
       ax-vm = mkConfig { hostname = "ax-vm"; };
-      ax-srv = mkConfig { hostname = "ax-srv"; home-manager = null; };
+      ax-fuji = mkConfig { hostname = "ax-fuji"; home-manager = null; };
     };
   };
 }
