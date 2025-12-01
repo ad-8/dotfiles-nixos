@@ -9,7 +9,6 @@
     home.packages = with pkgs; [
       anki
       brave
-      fooyin
       gimp3
       gnome-disk-utility
       kdePackages.dolphin
