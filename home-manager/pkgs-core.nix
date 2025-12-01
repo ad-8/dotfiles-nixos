@@ -8,6 +8,7 @@
   config = lib.mkIf config.pkgsCore.enable {
     home.packages = with pkgs; [
       alacritty
+      babashka
       bat
       delta
       emacs
@@ -22,6 +23,7 @@
       nnn
       psmisc # provides killall
       ripgrep
+      ruby_3_4
       starship
       stow
       tealdeer
@@ -29,10 +31,6 @@
       tree
       wget
       zoxide
-
-      # for our scripts and running the systems, we use
-      babashka
-      ruby_3_4
     ];
   };
 }
