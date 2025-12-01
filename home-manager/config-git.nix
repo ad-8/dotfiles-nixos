@@ -8,7 +8,7 @@
   config = lib.mkIf config.configGit.enable {
     programs.git = {
       enable = true;
-      extraConfig = {
+      settings = {
         user = {
           name = "arthur";
           email = "arthurfleck8@proton.me";

@@ -23,7 +23,7 @@
     # ignore short presses of the power button entirely. Long-pressing your power button (5 seconds or longer)
     # to do a hard reset is handled by your machine’s BIOS/EFI and thus still possible.
     # (https://wiki.nixos.org/wiki/Systemd/logind)
-    services.logind.powerKey = "ignore"; # started working after a reboot
+    services.logind.settings.Login.HandlePowerKey = "ignore"; # started working after a reboot
 
     services.keyd = {
       enable = true;
