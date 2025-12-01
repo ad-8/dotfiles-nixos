@@ -18,7 +18,7 @@
       libnotify
       networkmanagerapplet
       playerctl
-      rofi-wayland
+      rofi
       sct
       swaybg
       waybar
