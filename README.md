@@ -51,5 +51,5 @@ Also add `git` and `vim` to `environment.systemPackages` for the next steps.
 
     `boot.initrd.luks.devices... = "/dev/disk/by-uuid/..."`
 
-5. `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#<host>` 
+5. `sudo nixos-rebuild boot --flake ~/dotfiles-nixos#<host>` 
 
