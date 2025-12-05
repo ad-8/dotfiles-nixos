@@ -17,7 +17,7 @@
     configVirtman.enable = false;
 
 
-    boot.initrd.luks.devices."luks-f43e8971-1fb7-4d8c-be86-c8162a78d104".device = "/dev/disk/by-uuid/f43e8971-1fb7-4d8c-be86-c8162a78d104";
+    boot.initrd.luks.devices."luks-d907f4b2-fef1-4cf6-b246-4f22416782c1".device = "/dev/disk/by-uuid/d907f4b2-fef1-4cf6-b246-4f22416782c1";
     networking.hostName = "ax-x1c"; # Define your hostname.
 
     # ignore short presses of the power button entirely. Long-pressing your power button (5 seconds or longer)
