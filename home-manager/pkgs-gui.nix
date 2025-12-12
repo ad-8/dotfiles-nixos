@@ -11,8 +11,6 @@
       brave
       gimp3
       gnome-disk-utility
-      kdePackages.dolphin
-      kdePackages.gwenview
       kdePackages.okular
       keepassxc
       libreoffice-still
@@ -25,7 +23,6 @@
       qbittorrent
       strawberry
       ungoogled-chromium
-      xfce.mousepad
       xfce.ristretto
 
       # TODO broken after upgrading to 25.11
