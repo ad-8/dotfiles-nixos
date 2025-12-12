@@ -26,7 +26,6 @@
   home.homeDirectory = "/home/ax";
   home.packages = with pkgs; [
     ghostty
-    megasync
   ];
 
   programs.bash = {

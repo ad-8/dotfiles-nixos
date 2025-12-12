@@ -17,7 +17,7 @@
       keepassxc
       libreoffice-still
       localsend
-      # megasync # this compiles from src!
+      # megasync # this compiles from src! TODO broken after upgrading to 25.11 (won't build)
       mpv
       pavucontrol
       picard
@@ -28,12 +28,12 @@
       xfce.mousepad
       xfce.ristretto
 
-      # TODO proton vpn setup
-      # protonvpn-cli # sadly, does not let me log in (API error)
-      # and gui doesn't remember credentials after logout/login (works after reboot again), even with those 3 pkgs below 
-      protonvpn-gui
-      python313Packages.proton-keyring-linux # ProtonVPN core component to access Linux's keyring
-      python313Packages.proton-vpn-network-manager # Provides the necessary functionality for other ProtonVPN components to interact with NetworkManager
+      # TODO broken after upgrading to 25.11
+      # (probably because pkg `python313Packages.protonvpn-nm-lib` is in 25.05, but missing in 25.11;
+      # removed this nm pkg from there when upgrading macbook to 25.11)
+      # protonvpn-gui
+      # python313Packages.proton-keyring-linux # ProtonVPN core component to access Linux's keyring
+      # python313Packages.proton-vpn-network-manager # Provides the necessary functionality for other ProtonVPN components to interact with NetworkManager
     ];
   };
 }
