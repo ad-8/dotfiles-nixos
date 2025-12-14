@@ -77,12 +77,19 @@
     services.cron = {
       enable = true;
       systemCronJobs = [
-          "5 */2 * * *     ax     . /etc/profile; ruby $HOME/x/backup/ax_bee_restic_b2.rb >> ~/restic.log 2>&1"
+        "5 */2 * * *     ax     . /etc/profile; ruby $HOME/x/backup/ax_bee_restic_b2.rb >> ~/restic.log 2>&1"
       ];
     };
 
 
     programs.steam.enable = true;
+
+    # https://wiki.nixos.org/wiki/WireGuard#wg-quick_issues_with_NetworkManager
+    # didn't have this problem, but for me,
+    # prevents DNS leaks and works well with `wg-quick up`
+    # TODO for all machines?
+    networking.networkmanager.dns = "systemd-resolved";
+    services.resolved.enable = true;
 
     # -----------------------------------------------------------------------------------------------
     # distrobox

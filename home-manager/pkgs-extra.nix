@@ -20,6 +20,7 @@
       unzip # no zip, use tar xD
       usbutils # lsusb and more
       gum
+      wireguard-tools
 
       # emacs dirvish
       ffmpegthumbnailer
