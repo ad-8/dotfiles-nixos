@@ -23,6 +23,7 @@
       qbittorrent
       strawberry
       ungoogled-chromium
+      xfce.mousepad
       xfce.ristretto
     ];
   };
