@@ -1,36 +1,8 @@
 # NixOS
 Second time's the charm?
 
-## Commands
-### run after changing config
-`sudo nixos-rebuild dry-run --flake ~/dotfiles-nixos#ax-mac`
 
-`sudo nixos-rebuild switch --flake ~/dotfiles-nixos#ax-mac`
-
-### update packages
-not 100% sure, but this works so far
-
-#### sudo apt update
-1. `cd ~/dotfiles-nixos`
-2. `nix flake update` 
-
-#### sudo apt upgrade
-- *dry-run* to see changes
-- *switch* to apply them
-
-### collect garbage
-this deleted *all but* the current generation:
-
-a. `sudo nix-collect-garbage -d`
-
-*next time*, try this one:
-
-b. `sudo nix-collect-garbage --delete-older-than 10d`
-
-Finally run `sudo nixos-rebuild switch --flake ~/dotfiles-nixos#<host>` to remove the old generations from the boot menu.
-
-
-## GUI Installation with LUKS -> convert to flake config
+## GUI Installation with LUKS -> convert to this flake-based config
 Install via Graphical ISO Image, which has a fast and easy Calamares installer 
 with optional LUKS setup.
 
