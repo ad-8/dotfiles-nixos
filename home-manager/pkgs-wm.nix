@@ -7,18 +7,19 @@
 
   config = lib.mkIf config.pkgsWm.enable {
     home.packages = with pkgs; [
-      # programs.sway.enable installs swaylock, swayidle
-      # 
       # light # enabled in configuration.nix
       ddcutil
       dunst
       gammastep
+      hypridle
       libnotify
       networkmanagerapplet
       playerctl
       rofi
       sct
       swaybg
+      swaybg
+      swaylock
       waybar
       wl-clipboard
       wmenu
