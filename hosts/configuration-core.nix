@@ -4,13 +4,14 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true; # Allow unfree packages
 
-  # Bootloader.
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+
   time.timeZone = "Europe/Berlin";
 
-  # Select internationalisation properties.
+
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "de_DE.UTF-8";
@@ -24,9 +25,8 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # Configure console keymap
+
   console.keyMap = "de";
-  # Configure keymap in X11
   services.xserver.xkb = {
     layout = "de";
     variant = "";
@@ -39,7 +39,7 @@
     ncdu
   ];
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+
   users.users.ax = {
     isNormalUser = true;
     description = "ax";
@@ -49,8 +49,10 @@
     ];
   };
 
+
   programs.fish.enable = true;
   users.users.ax.shell = pkgs.fish;
+
 
   security.sudo.extraConfig = ''
     Defaults timestamp_timeout=30
