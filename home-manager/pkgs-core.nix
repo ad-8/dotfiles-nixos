@@ -18,7 +18,6 @@
       file
       fzf
       htop
-      ncdu
       nh
       nnn
       psmisc # provides killall
@@ -29,7 +28,6 @@
       tealdeer
       tokei
       tree
-      wget
       zoxide
     ];
   };
