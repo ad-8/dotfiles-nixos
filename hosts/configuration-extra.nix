@@ -79,12 +79,6 @@
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-      # If you want to use JACK applications, uncomment this
-      #jack.enable = true;
-
-      # use the example session manager (no others are packaged yet so this is enabled by default,
-      # no need to redefine it in your config for now)
-      #media-session.enable = true;
     };
 
     # Enable touchpad support (enabled default in most desktopManager).
@@ -97,30 +91,16 @@
       rclone
     ];
 
+
     services.clamav.daemon.enable = true;
     services.clamav.updater.enable = true;
 
-    # TODO failed to start the daemon after nixos-rebuild
-    # services.emacs.enable = true;
 
-    # Some programs need SUID wrappers, can be configured further or are
-    # started in user sessions.
-    # programs.mtr.enable = true;
-    # programs.gnupg.agent = {
-      #   enable = true;
-      #   enableSSHSupport = true;
-      # };
-
-      # List services that you want to enable:
-
-      # Enable the OpenSSH daemon.
-      # services.openssh.enable = true;
-
-      # The firewall is enabled by default on NixOS. Still, explicitly ensure it is enabled
-      networking.firewall.enable = true;
-      # Open ports in the firewall.
-      # networking.firewall.allowedTCPPorts = [ ... ];
-      # networking.firewall.allowedUDPPorts = [ ... ];
+    # The firewall is enabled by default on NixOS. Still, explicitly ensure it is enabled
+    networking.firewall.enable = true;
+    # Open ports in the firewall.
+    # networking.firewall.allowedTCPPorts = [ ... ];
+    # networking.firewall.allowedUDPPorts = [ ... ];
   };
 }
 
