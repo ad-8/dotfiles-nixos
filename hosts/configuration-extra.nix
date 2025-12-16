@@ -48,18 +48,24 @@
     # TODO put this in a config-xserver.nix
     # Enable the X11 windowing system.
     services.xserver.enable = true;
+    # NixOS defaults to LightDM when no display-manager is explicitly enabled
+    systemd.services.display-manager.enable = false;
     # display manager, window manager and shell
-    services.xserver.displayManager.lightdm = {
-      enable = true;
-      greeters.gtk.enable = true;
-      extraConfig = ''
-        clock-format =  %a, %d.%m.    %H:%M
-        indicators = ~session;~spacer;~clock;~spacer;~power
-        font-name = Hack Nerd Font Regular 12
-      '';
-    };
+    # services.xserver.displayManager.lightdm = {
+    #   enable = true;
+    #   greeters.gtk.enable = true;
+    #   extraConfig = ''
+    #     clock-format =  %a, %d.%m.    %H:%M
+    #     indicators = ~session;~spacer;~clock;~spacer;~power
+    #     font-name = Hack Nerd Font Regular 12
+    #   '';
+    # };
     # services.xserver.displayManager.lightdm.greeters.slick.enable = true;
-    programs.sway.enable = true; # needed a reboot to show up in the display manager
+    programs.hyprland = {
+      enable = true;
+      withUWSM = false; # recommended for most users
+      xwayland.enable = true; # Xwayland can be disabled.
+    };
     # -------------------------------------
     # TODO put this in config-...nix
     # Some programs are installed like this, don't know why yet
