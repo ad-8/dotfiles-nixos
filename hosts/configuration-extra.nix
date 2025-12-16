@@ -44,31 +44,16 @@
     };
 
 
+    # TODO put settings in the following sections in config-<category>.nix files
     # -------------------------------------
-    # TODO put this in a config-xserver.nix
-    # Enable the X11 windowing system.
-    services.xserver.enable = true;
-    # NixOS defaults to LightDM when no display-manager is explicitly enabled
-    systemd.services.display-manager.enable = false;
-    # display manager, window manager and shell
-    # services.xserver.displayManager.lightdm = {
-    #   enable = true;
-    #   greeters.gtk.enable = true;
-    #   extraConfig = ''
-    #     clock-format =  %a, %d.%m.    %H:%M
-    #     indicators = ~session;~spacer;~clock;~spacer;~power
-    #     font-name = Hack Nerd Font Regular 12
-    #   '';
-    # };
-    # services.xserver.displayManager.lightdm.greeters.slick.enable = true;
+    services.xserver.enable = true; # Enable the X11 windowing system.
+    systemd.services.display-manager.enable = false; # NixOS defaults to LightDM when no display-manager is explicitly enabled
     programs.hyprland = {
       enable = true;
-      withUWSM = false; # recommended for most users
-      xwayland.enable = true; # Xwayland can be disabled.
+      withUWSM = false; # recommended for most users -- not working for me on 25.11
+      xwayland.enable = true;
     };
     # -------------------------------------
-    # TODO put this in config-...nix
-    # Some programs are installed like this, don't know why yet
     programs.firefox.enable = true;
     programs.java.enable = true;
     # https://wiki.nixos.org/wiki/Thunar
@@ -77,7 +62,6 @@
     services.gvfs.enable = true; # Mount, trash, and other functionalities
     services.tumbler.enable = true; # Thumbnail support for images
     # -------------------------------------
-    # TODO you know the drill ...
     fonts.packages = with pkgs; [
       nerd-fonts.hack
     ];
