@@ -1,12 +1,8 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, lib, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
     ./hardware-configuration.nix
     ../configuration-core.nix
     ../ax-configs.nix
@@ -18,9 +14,8 @@
 
 
     boot.initrd.luks.devices."luks-1101d87b-2380-4455-a516-1dda026f32e3".device = "/dev/disk/by-uuid/1101d87b-2380-4455-a516-1dda026f32e3";
-    networking.hostName = "ax-bee"; # Define your hostname.
+    networking.hostName = "ax-bee";
 
-    # services.desktopManager.plasma6.enable = true;
 
     services.keyd = {
       enable = true;

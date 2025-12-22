@@ -1,12 +1,8 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, lib, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
     ./hardware-configuration.nix
     ../configuration-core.nix
     ../ax-configs.nix
@@ -18,7 +14,7 @@
 
 
     boot.initrd.luks.devices."luks-d907f4b2-fef1-4cf6-b246-4f22416782c1".device = "/dev/disk/by-uuid/d907f4b2-fef1-4cf6-b246-4f22416782c1";
-    networking.hostName = "ax-x1c"; # Define your hostname.
+    networking.hostName = "ax-x1c";
 
     # ignore short presses of the power button entirely. Long-pressing your power button (5 seconds or longer)
     # to do a hard reset is handled by your machine’s BIOS/EFI and thus still possible.
