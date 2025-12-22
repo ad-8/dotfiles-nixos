@@ -37,6 +37,7 @@
 
       # backup
       restic
+      rclone
 
       # code
       babashka

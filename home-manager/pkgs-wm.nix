@@ -18,7 +18,6 @@
       rofi
       sct
       swaybg
-      swaybg
       swaylock
       waybar
       wl-clipboard
