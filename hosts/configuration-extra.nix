@@ -38,8 +38,9 @@
 
     # TODO put settings in the following sections in config-<category>.nix files
     # -------------------------------------
-    services.xserver.enable = true; # Enable the X11 windowing system.
-    systemd.services.display-manager.enable = false; # NixOS defaults to LightDM when no display-manager is explicitly enabled
+    services.xserver.enable = true;
+    services.xserver.displayManager.lightdm.enable = true;
+    # systemd.services.display-manager.enable = false; # disables all display managers. NixOS defaults to LightDM when no display-manager is explicitly enabled
     programs.hyprland = {
       enable = true;
       withUWSM = false; # recommended for most users -- not working for me on 25.11
