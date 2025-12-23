@@ -17,7 +17,7 @@
   configMegasync.enable = false;
   configMime.enable = true;
   configQt.enable = true;
-  configSecretService.enable = true;
+  configSecretService.enable = false;
   configWebApps.enable = false;
 
   home.stateVersion = "25.05";
