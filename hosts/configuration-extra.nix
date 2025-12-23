@@ -9,11 +9,9 @@
     networking.networkmanager.enable = true;
 
     security.polkit.enable = true;
-    # Auto-decrypt keyring on login (The NixOS module for GNOME Keyring enables its PAM module automatically
-    # via security.pam.services.*.enableGnomeKeyring, however the Home Manager module does not), so:
-    #
-    # works with GDM, but sadly not (yet?) with ly
-    security.pam.services.login.enableGnomeKeyring = true;
+    services.gnome.gnome-keyring.enable = true;
+    security.pam.services.gdm.enableGnomeKeyring = true; # load gnome-keyring at startup
+    programs.seahorse.enable = true; # GUI to manage secrets
 
     # https://wiki.nixos.org/wiki/Backlight
     hardware.i2c.enable = true;
@@ -39,7 +37,7 @@
     # TODO put settings in the following sections in config-<category>.nix files
     # -------------------------------------
     services.xserver.enable = true;
-    services.xserver.displayManager.lightdm.enable = true;
+    services.xserver.displayManager.gdm.enable = true;
     # systemd.services.display-manager.enable = false; # disables all display managers. NixOS defaults to LightDM when no display-manager is explicitly enabled
     programs.hyprland = {
       enable = true;
@@ -80,6 +78,7 @@
       ffmpeg-full
       restic
       rclone
+      libsecret
     ];
 
 
