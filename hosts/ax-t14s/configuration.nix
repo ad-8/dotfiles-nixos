@@ -14,7 +14,7 @@
 
 
     boot.initrd.luks.devices."luks-d907f4b2-fef1-4cf6-b246-4f22416782c1".device = "/dev/disk/by-uuid/d907f4b2-fef1-4cf6-b246-4f22416782c1";
-    networking.hostName = "ax-x1c";
+    networking.hostName = "ax-t14s";
 
     # ignore short presses of the power button entirely. Long-pressing your power button (5 seconds or longer)
     # to do a hard reset is handled by your machine’s BIOS/EFI and thus still possible.
