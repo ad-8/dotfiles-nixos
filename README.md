@@ -6,7 +6,9 @@ Second time's the charm?
 Install via Graphical ISO Image, which has a fast and easy Calamares installer 
 with optional LUKS setup.
 
-Tested with GNOME as DE in LiveDVD+Installation, then converted to the OG flake-config like so:
+Tested with GNOME as DE in LiveDVD+Installation,  
+(choose =GNOME= instead of =No desktop= in installer for easier WLAN setup before rebuild later)  
+then converted to the OG flake-config like so:
 1. Add line to `/etc/nixos/configuration.nix`:
 ```nix
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
