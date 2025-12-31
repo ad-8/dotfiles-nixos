@@ -21,7 +21,8 @@ Also add `git` and `vim` to `environment.systemPackages` for the next steps.
 3. git clone *dotfiles*, *dotfiles-nixos* and *scripts*, then `cp /etc/nixos/hardware-configuration.nix ~/dotfiles-nixos/hosts/<host>/` 
 
 4. if NOT using LUKS, skip this step  
-    add this LUKS line from `/etc/nixos/configuration.nix` to `~/dotfiles-nixos/hosts/<host>/configuration.nix`
+    add this LUKS line from `/etc/nixos/configuration.nix` to `~/dotfiles-nixos/hosts/<host>/configuration.nix`  
+    (or replace existing equivalent)
 
     `boot.initrd.luks.devices... = "/dev/disk/by-uuid/..."`
 
