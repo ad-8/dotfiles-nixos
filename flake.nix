@@ -34,7 +34,6 @@
   in {
     nixosConfigurations = {
       ax-mac = mkConfig { hostname = "ax-mac"; };
-      ax-t14s = mkConfig { hostname = "ax-t14s"; };
       ax-bee = mkConfig { hostname = "ax-bee"; };
       ax-vm = mkConfig { hostname = "ax-vm"; };
       ax-fuji = mkConfig { hostname = "ax-fuji"; home-manager = null; };
