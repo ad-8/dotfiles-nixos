@@ -37,7 +37,7 @@
     # TODO put settings in the following sections in config-<category>.nix files
     # -------------------------------------
     services.xserver.enable = true;
-    services.xserver.displayManager.gdm.enable = true;
+    services.displayManager.gdm.enable = true;
     # systemd.services.display-manager.enable = false; # disables all display managers. NixOS defaults to LightDM when no display-manager is explicitly enabled
     programs.hyprland = {
       enable = true;
