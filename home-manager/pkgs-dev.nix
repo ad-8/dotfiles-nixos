@@ -10,6 +10,7 @@
       bundix
       clojure
       clojure-lsp
+      geckodriver
       gh
       jetbrains.ruby-mine
       jq
