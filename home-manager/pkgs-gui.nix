@@ -23,6 +23,7 @@
       qbittorrent
       strawberry
       ungoogled-chromium
+      vlc
       xfce.mousepad
       xfce.ristretto
     ];
