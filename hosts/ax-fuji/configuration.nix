@@ -45,6 +45,9 @@
 
       # selfhosting
       podman-compose
+      jellyfin
+      jellyfin-web
+      jellyfin-ffmpeg
     ];
 
 
@@ -69,6 +72,11 @@
           # download daily wallpaper
           "0 9,10,11 * * *     ax     . /etc/profile; nix develop ~/x --command ruby ~/x/bing_wallpaper_dl.rb >> ~/bing.log 2>&1"
         ];
+      };
+      jellyfin = {
+        enable = true;
+        openFirewall = true;
+        user = "ax";
       };
       openssh = {
         enable = true;
