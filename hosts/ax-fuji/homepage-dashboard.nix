@@ -68,7 +68,7 @@
         ];
       }
       {
-        "Backup & Storage & Sync" = [
+        "Backup, Storage & Sync" = [
           {
             LambdaCore = {
               href = "http://192.168.178.20:5000";
@@ -83,6 +83,18 @@
               icon = "syncthing.png";
               description = "File Sync";
               siteMonitor = "http://127.0.0.1:8384"; # but this works
+            };
+          }
+        ];
+      }
+      {
+        "Networking" = [
+          {
+            Router = {
+              href = "http://192.168.178.1";
+              icon = "fritzbox.png";
+              description = "FRITZ!Box 7510";
+              siteMonitor = "http://192.168.178.1";
             };
           }
         ];
