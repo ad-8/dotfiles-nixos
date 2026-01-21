@@ -22,16 +22,16 @@
       }
       {
         resources = {
-          label = "uptime";
-          uptime = true;
-        };
-      }
-      {
-        resources = {
           label = "system resources";
           cpu = true;
           disk = "/";
           memory = true;
+        };
+      }
+      {
+        resources = {
+          label = "uptime";
+          uptime = true;
         };
       }
     ];
