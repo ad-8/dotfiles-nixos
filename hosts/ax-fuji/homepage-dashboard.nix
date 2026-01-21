@@ -5,6 +5,9 @@
     enable = true;
     openFirewall = true;
     environmentFile = "/home/ax/dotfiles-nixos/hosts/ax-fuji/.env"; # must contain HOMEPAGE_ALLOWED_HOSTS
+    settings = {
+      statusStyle = "dot";
+    };
     widgets = [
       {
         datetime = {
