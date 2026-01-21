@@ -91,8 +91,13 @@
           }
           {
             resources = {
-              label = "ax-fuji - system resources";
+              label = "uptime";
               uptime = true;
+            };
+          }
+          {
+            resources = {
+              label = "system resources";
               cpu = true;
               disk = "/";
               memory = true;
