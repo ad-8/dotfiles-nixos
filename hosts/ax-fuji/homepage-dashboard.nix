@@ -10,6 +10,17 @@
     };
     widgets = [
       {
+        logo = {
+          icon = "nixos.png";
+        };
+      }
+      {
+        greeting = {
+          text_size = "xl";
+          text = "axLAB";
+        };
+      }
+      {
         datetime = {
           locale = "de-DE";
           text_size = "xl";
