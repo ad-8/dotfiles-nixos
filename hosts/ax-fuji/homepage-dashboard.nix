@@ -34,12 +34,6 @@
           memory = true;
         };
       }
-      {
-        search = {
-          provider = "duckduckgo";
-          target = "_blank";
-        };
-      }
     ];
     services = [
       {
