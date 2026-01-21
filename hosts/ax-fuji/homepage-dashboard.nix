@@ -42,7 +42,7 @@
             Immich = {
               href = "http://192.168.178.8:2283";
               icon = "immich.png";
-              description = "Photos";
+              description = "Photos & Videos";
               siteMonitor = "http://192.168.178.8:2283";
             };
           }
@@ -50,7 +50,7 @@
             Jellyfin = {
               href = "http://192.168.178.8:8096";
               icon = "jellyfin.png";
-              description = "Media Server";
+              description = "Movies & TV Shows";
               siteMonitor = "http://192.168.178.8:8096";
             };
           }
