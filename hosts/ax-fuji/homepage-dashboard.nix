@@ -66,6 +66,14 @@
               siteMonitor = "http://192.168.178.8:9090";
             };
           }
+          {
+            Syncthing = {
+              # href = "http://127.0.0.1:8384"; # not sure how to set this up with syncthing running on the client as well
+              icon = "syncthing.png";
+              description = "File Sync";
+              siteMonitor = "http://127.0.0.1:8384"; # but this works
+            };
+          }
         ];
       }
     ];
