@@ -57,13 +57,13 @@
         ];
       }
       {
-        "Misc" = [
+        "Storage & Sync" = [
           {
-            Linkding = {
-              href = "http://192.168.178.8:9090";
-              icon = "linkding.png";
-              description = "Bookmarks";
-              siteMonitor = "http://192.168.178.8:9090";
+            LambdaCore = {
+              href = "http://192.168.178.20:5000";
+              icon = "synology-dsm.png";
+              description = "Synology DS224+ NAS";
+              siteMonitor = "http://192.168.178.20:5000";
             };
           }
           {
@@ -72,6 +72,18 @@
               icon = "syncthing.png";
               description = "File Sync";
               siteMonitor = "http://127.0.0.1:8384"; # but this works
+            };
+          }
+        ];
+      }
+      {
+        "Misc" = [
+          {
+            Linkding = {
+              href = "http://192.168.178.8:9090";
+              icon = "linkding.png";
+              description = "Bookmarks";
+              siteMonitor = "http://192.168.178.8:9090";
             };
           }
         ];
