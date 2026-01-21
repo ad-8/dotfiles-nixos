@@ -11,13 +11,13 @@
     widgets = [
       {
         logo = {
-          icon = "nixos.png";
+          icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Half-Life_lambda_logo.svg/3840px-Half-Life_lambda_logo.svg.png";
         };
       }
       {
         greeting = {
           text_size = "xl";
-          text = "axLAB";
+          text = "LambdaLab";
         };
       }
       {
@@ -68,7 +68,7 @@
         ];
       }
       {
-        "Storage & Sync" = [
+        "Backup & Storage & Sync" = [
           {
             LambdaCore = {
               href = "http://192.168.178.20:5000";
