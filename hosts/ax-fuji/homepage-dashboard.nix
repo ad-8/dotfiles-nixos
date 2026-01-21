@@ -11,7 +11,7 @@
     widgets = [
       {
         logo = {
-          icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Half-Life_lambda_logo.svg/3840px-Half-Life_lambda_logo.svg.png";
+          icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Half-Life_lambda_logo.svg/250px-Half-Life_lambda_logo.svg.png";
         };
       }
       {
