@@ -68,21 +68,13 @@
         ];
       }
       {
-        "Backup, Storage & Sync" = [
+        "Misc" = [
           {
-            LambdaCore = {
-              href = "http://192.168.178.20:5000";
-              icon = "synology-dsm.png";
-              description = "Synology DS224+ NAS";
-              siteMonitor = "http://192.168.178.20:5000";
-            };
-          }
-          {
-            Syncthing = {
-              # href = "http://127.0.0.1:8384"; # not sure how to set this up with syncthing running on the client as well
-              icon = "syncthing.png";
-              description = "File Sync";
-              siteMonitor = "http://127.0.0.1:8384"; # but this works
+            Linkding = {
+              href = "http://192.168.178.8:9090";
+              icon = "linkding.png";
+              description = "Bookmarks";
+              siteMonitor = "http://192.168.178.8:9090";
             };
           }
         ];
@@ -100,13 +92,21 @@
         ];
       }
       {
-        "Misc" = [
+        "Storage & Sync" = [
           {
-            Linkding = {
-              href = "http://192.168.178.8:9090";
-              icon = "linkding.png";
-              description = "Bookmarks";
-              siteMonitor = "http://192.168.178.8:9090";
+            LambdaCore = {
+              href = "http://192.168.178.20:5000";
+              icon = "synology-dsm.png";
+              description = "Synology DS224+ NAS";
+              siteMonitor = "http://192.168.178.20:5000";
+            };
+          }
+          {
+            Syncthing = {
+              # href = "http://127.0.0.1:8384"; # not sure how to set this up with syncthing running on the client as well
+              icon = "syncthing.png";
+              description = "File Sync";
+              siteMonitor = "http://127.0.0.1:8384"; # but this works
             };
           }
         ];
