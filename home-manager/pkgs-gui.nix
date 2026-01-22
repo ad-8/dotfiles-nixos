@@ -22,6 +22,7 @@
       qalculate-gtk
       qbittorrent
       strawberry
+      thunderbird
       ungoogled-chromium
       vlc
       xfce.mousepad
