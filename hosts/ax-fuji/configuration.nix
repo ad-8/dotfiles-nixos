@@ -60,7 +60,7 @@
 
 
     networking.firewall.enable = true; # enabled by default, still enable explicitly
-    networking.firewall.allowedTCPPorts = [ 2283 9090 ]; # immich, linkding
+    networking.firewall.allowedTCPPorts = [ 2283 5232 9090 ]; # immich, radicale, linkding
     # networking.firewall.allowedUDPPorts = [ ... ];
 
 
@@ -81,6 +81,17 @@
       };
       openssh = {
         enable = true;
+      };
+      radicale = {
+        enable = true;
+        settings = {
+          server.hosts = [ "0.0.0.0:5232" ];
+          auth = {
+            type = "htpasswd";
+            htpasswd_filename = "/var/lib/radicale/radicale_users";
+            htpasswd_encryption = "bcrypt";
+          };
+        };
       };
       syncthing = {
         enable = true;
