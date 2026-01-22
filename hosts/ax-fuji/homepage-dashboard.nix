@@ -77,6 +77,14 @@
               siteMonitor = "http://192.168.178.8:9090";
             };
           }
+          {
+            Radicale = {
+              href = "http://192.168.178.8:5232";
+              icon = "radicale.png";
+              description = "CalDAV and CardDAV Server";
+              siteMonitor = "http://192.168.178.8:5232";
+            };
+          }
         ];
       }
       {
