@@ -68,8 +68,9 @@
       cron = {
         enable = true;
         systemCronJobs = [
-          "10 3 * * *     ax     . /etc/profile; ruby $HOME/x/backup/ax-srv-backup-immich.rb >> ~/cron-immich.log 2>&1"
-          "20 3 * * *     ax     . /etc/profile; ruby $HOME/x/backup/ax-srv-backup-linkding.rb >> ~/cron-linkding.log 2>&1"
+          "10 3 * * *     ax     . /etc/profile; ruby $HOME/x/backup/ax-srv-backup-radicale.rb >> ~/cron-radicale.log 2>&1"
+          "12 3 * * *     ax     . /etc/profile; ruby $HOME/x/backup/ax-srv-backup-linkding.rb >> ~/cron-linkding.log 2>&1"
+          "15 3 * * *     ax     . /etc/profile; ruby $HOME/x/backup/ax-srv-backup-immich.rb >> ~/cron-immich.log 2>&1"
           # download daily wallpaper
           "0 9,10,11 * * *     ax     . /etc/profile; nix develop ~/x --command ruby ~/x/bing_wallpaper_dl.rb >> ~/bing.log 2>&1"
         ];
