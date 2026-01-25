@@ -21,7 +21,6 @@
     # ensure the client has the necessary NFS utilities installed
     boot.supportedFilesystems = [ "nfs" ];
 
-    # https://wiki.nixos.org/wiki/Syncthing
     services = {
       syncthing = {
         enable = true;
@@ -47,12 +46,11 @@
         };
       };
     };
-    # services.displayManager.gdm.enable = true;
     services.displayManager.ly.enable = true;
     # systemd.services.display-manager.enable = false; # disables all display managers. NixOS defaults to LightDM when no display-manager is explicitly enabled
     programs.hyprland = {
       enable = true;
-      withUWSM = false; # recommended for most users -- not working for me on 25.11
+      withUWSM = false;
       xwayland.enable = true;
     };
     # -------------------------------------
