@@ -1,0 +1,17 @@
+#+title: Readme
+
+* FreeBSD
+Edit =config.mk= so you can build dwm on FreeBSD, more precisely the following lines:
+
+#+begin_src shell
+X11INC = /usr/X11R6/include                      ->          X11INC = /usr/local/include
+X11LIB = /usr/X11R6/lib                          ->          X11LIB = /usr/local/lib
+FREETYPEINC = /usr/include/freetype2             ->          FREETYPEINC = /usr/local/include/freetype2
+#+end_src
+
+now ~make~ and ~make clean install~ should work
+
+** dwm.desktop
+- copy into =/usr/local/share/xsessions= 
+- make sure all users have read permissions with =chmod +r dwm.desktop=,
+  else it won't show up in =lightdm=
