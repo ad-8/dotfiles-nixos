@@ -39,11 +39,11 @@
       enable = true;
       autoRepeatDelay = 200;
       autoRepeatInterval = 35;
-      windowManager.dwm = {
-        enable = true;
-        package = pkgs.dwm.overrideAttrs {
-          src = ../config/dwm-ax;
-        };
+    };
+    services.xserver.windowManager.dwm = {
+      enable = true;
+      package = pkgs.dwm.overrideAttrs {
+        src = ../config/dwm-ax;
       };
     };
     services.displayManager.ly.enable = true;
