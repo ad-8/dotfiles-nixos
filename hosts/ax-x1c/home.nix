@@ -24,7 +24,13 @@
   home.stateVersion = "25.05";
   home.username = "ax";
   home.homeDirectory = "/home/ax";
+  # TODO put in a separate file
   home.packages = with pkgs; [
+    # https://www.tonybtw.com/tutorial/suckless-nixos/
+    (pkgs.dwmblocks.overrideAttrs (_: {
+      src = ../../config/dwmblocks;
+      patches = [ ];
+    }))
   ];
 
   programs.bash = {
