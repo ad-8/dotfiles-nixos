@@ -2,9 +2,6 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"", "~/scripts/bb/weather.clj dwm", 360,	0},
-	{"", "~/scripts/bb/bsd.clj", 10,	0},
-	{"", "~/backlight.sh", 30,	0},
-	{"", "~/batinfo.sh", 30,	0},
 	{"", "~/scripts/legacy-xorg-dwm/dwm-date.sh", 1,	0},
 };
 
