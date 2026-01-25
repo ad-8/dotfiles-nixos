@@ -29,8 +29,8 @@
             main = {
               # Maps capslock to escape when pressed and control when held.
               capslock = "overload(control, esc)";
-              leftalt = "leftmeta";
-              leftmeta = "leftalt";
+              # leftalt = "leftmeta";
+              # leftmeta = "leftalt";
             };
             otherlayer = {};
           };
