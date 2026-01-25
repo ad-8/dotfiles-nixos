@@ -13,7 +13,6 @@
         patches = [ ];
       }))
       dmenu
-      slock
       sxhkd
       xsct
     ];

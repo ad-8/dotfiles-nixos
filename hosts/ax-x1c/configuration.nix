@@ -41,6 +41,7 @@
     # laptop battery info via `upower --dump`
     services.upower.enable = true;
 
+    programs.slock.enable = true;
 
     # TODO config e.g. tap to click
     # Enable touchpad support (enabled default in most desktopManager).
