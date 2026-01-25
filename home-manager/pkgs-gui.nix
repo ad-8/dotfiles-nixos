@@ -7,6 +7,7 @@
 
   config = lib.mkIf config.pkgsGui.enable {
     home.packages = with pkgs; [
+      # megasync # this compiles from src! TODO broken after upgrading to 25.11 (won't build)
       anki
       brave
       gimp3
@@ -15,10 +16,10 @@
       keepassxc
       libreoffice-still
       localsend
-      # megasync # this compiles from src! TODO broken after upgrading to 25.11 (won't build)
       mpv
       pavucontrol
       picard
+      protonmail-bridge-gui
       qalculate-gtk
       qbittorrent
       strawberry
