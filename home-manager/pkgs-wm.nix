@@ -22,6 +22,11 @@
       waybar
       wl-clipboard
       wmenu
+
+      # xorg
+      dmenu
+      sxhkd
+      xsct
     ];
   };
 }
