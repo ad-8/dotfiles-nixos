@@ -34,7 +34,7 @@
     };
   in {
     devShells.${system}.suckless = pkgs.mkShell {
-      # toolchain + headers/libs
+      # a devshell for suckless tools like dwm, dmenu or st (toolchain + headers/libs)
       packages = with pkgs; [
         pkg-config
         xorg.libX11
