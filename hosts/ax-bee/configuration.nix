@@ -95,6 +95,10 @@
     environment.systemPackages = [ pkgs.distrobox ];
     # -----------------------------------------------------------------------------------------------
 
+    # android adb setup
+    programs.adb.enable = true;
+    users.users.ax.extraGroups = [ "adbusers" ];
+
 
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions
