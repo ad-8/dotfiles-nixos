@@ -2,6 +2,7 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"", "~/scripts/bb/weather.clj dwm", 360,	0},
+	{"", "~/scripts/legacy-xorg-dwm/dwm-volume.sh", 10,	0},
 	{"", "~/scripts/waybar.clj load", 10,	0},
 	{"", "~/scripts/legacy-xorg-dwm/dwm_disk_space.clj", 10,	0},
 	{"", "~/scripts/legacy-xorg-dwm/dwm_memory.clj", 10,	0},
