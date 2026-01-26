@@ -53,6 +53,15 @@
       withUWSM = false;
       xwayland.enable = true;
     };
+    programs.niri = {
+      enable = true;
+    };
+    xdg.portal = {
+      enable = true;
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+      wlr.enable = true;
+    };
+
     # -------------------------------------
     programs.firefox.enable = true;
     programs.java.enable = true;
@@ -88,6 +97,7 @@
       restic
       rclone
       libsecret
+      xwayland-satellite # xwayland support for niri
     ];
 
 
