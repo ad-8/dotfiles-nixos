@@ -10,7 +10,7 @@
       # light # enabled in configuration.nix
       ddcutil
       dunst
-      gammastep
+      hyprsunset
       hypridle
       libnotify
       networkmanagerapplet
