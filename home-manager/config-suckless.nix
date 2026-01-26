@@ -14,6 +14,7 @@
       }))
       dmenu
       sxhkd
+      xautolock
       xsct
     ];
   };
