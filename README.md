@@ -28,17 +28,3 @@ Also add `git` and `vim` to `environment.systemPackages` for the next steps.
 
 5. `sudo nixos-rebuild boot --flake ~/dotfiles-nixos#<host>` 
 
-
-## suckless devshell
-https://www.tonybtw.com/tutorial/suckless-nixos/
-
-Enter with `nix develop .#suckless`
-
-cd into e.g. `dwmblocks`, make changes, then run `make`
-and just run the local `./dwmblocks` binary to see those changes.
-
-when happy with changes, run `make clean` (gets rid of some unneeded files) and exit devshell.
-(the above is just the development workflow, and not strictly necessary -  
-rebuild will build/make new version of dwm/dwmblocks etc)
-Finally, run `nixos-rebuild switch`
-
