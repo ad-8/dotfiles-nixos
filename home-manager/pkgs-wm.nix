@@ -10,6 +10,7 @@
       # light # enabled in configuration.nix
       ddcutil
       dunst
+      gammastep
       hypridle
       hyprsunset
       libnotify
