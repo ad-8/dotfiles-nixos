@@ -10,14 +10,15 @@
       # light # enabled in configuration.nix
       ddcutil
       dunst
-      hyprsunset
       hypridle
+      hyprsunset
       libnotify
       networkmanagerapplet
       playerctl
       rofi
       sct
       swaybg
+      swayidle
       swaylock
       waybar
       wl-clipboard
