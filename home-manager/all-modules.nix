@@ -9,7 +9,6 @@
     ./config-mime.nix
     ./config-qt.nix
     ./config-secret-service.nix
-    ./config-suckless.nix
     ./config-webapps.nix
     ./pkgs-core.nix
     ./pkgs-dev.nix

@@ -11,7 +11,6 @@
   outputs = { self, nixpkgs-stable, nixpkgs-unstable, home-manager-stable, home-manager-unstable, ... }:
   let
     system = "x86_64-linux";
-    pkgs = import nixpkgs-unstable { inherit system; };
     mkConfig = { hostname, username ? "ax", nixpkgs ? nixpkgs-stable , home-manager ? home-manager-stable}:
     let
       hm = if home-manager != null then [
@@ -33,20 +32,6 @@
       ] ++ hm;
     };
   in {
-    devShells.${system}.suckless = pkgs.mkShell {
-      # a devshell for suckless tools like dwm, dmenu or st (toolchain + headers/libs)
-      packages = with pkgs; [
-        pkg-config
-        xorg.libX11
-        xorg.libXft
-        xorg.libXinerama
-        fontconfig
-        freetype
-        harfbuzz
-        gcc
-        gnumake
-      ];
-    };
     nixosConfigurations = {
       ax-mac = mkConfig { hostname = "ax-mac"; };
       ax-x1c = mkConfig { hostname = "ax-x1c"; };

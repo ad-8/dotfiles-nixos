@@ -40,12 +40,6 @@
       autoRepeatDelay = 200;
       autoRepeatInterval = 35;
     };
-    services.xserver.windowManager.dwm = {
-      enable = true;
-      package = pkgs.dwm.overrideAttrs {
-        src = ../config/dwm-ax;
-      };
-    };
     services.displayManager.ly.enable = true;
     # systemd.services.display-manager.enable = false; # disables all display managers. NixOS defaults to LightDM when no display-manager is explicitly enabled
     programs.hyprland = {
