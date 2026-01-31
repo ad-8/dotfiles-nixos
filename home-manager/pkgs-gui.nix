@@ -22,6 +22,7 @@
       protonmail-bridge-gui
       qalculate-gtk
       qbittorrent
+      qutebrowser
       strawberry
       thunderbird
       ungoogled-chromium
