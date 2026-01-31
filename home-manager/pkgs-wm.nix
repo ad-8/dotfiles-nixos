@@ -11,13 +11,10 @@
       ddcutil
       dunst
       gammastep
-      hypridle
-      hyprsunset
       libnotify
       networkmanagerapplet
       playerctl
       rofi
-      sct
       swaybg
       swayidle
       swaylock
