@@ -78,6 +78,9 @@
 
 
     programs.steam.enable = true;
+    # heroic wiki recommends
+    programs.gamescope.enable = true;
+    programs.gamemode.enable = true;
 
     # https://wiki.nixos.org/wiki/WireGuard#wg-quick_issues_with_NetworkManager
     # didn't have this problem, but for me,
@@ -92,7 +95,15 @@
       enable = true;
       dockerCompat = true;
     };
-    environment.systemPackages = [ pkgs.distrobox ];
+    environment.systemPackages = with pkgs; [
+      distrobox
+      (heroic.override {
+        extraPkgs = pkgs: [
+          pkgs.gamescope
+          pkgs.mangohud
+        ];
+      })
+    ];
     # -----------------------------------------------------------------------------------------------
 
     # android adb setup
