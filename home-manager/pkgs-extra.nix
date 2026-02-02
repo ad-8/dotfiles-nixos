@@ -7,7 +7,6 @@
 
   config = lib.mkIf config.pkgsExtra.enable {
     home.packages = with pkgs; [
-      bluetui
       btop
       chezmoi
       gum

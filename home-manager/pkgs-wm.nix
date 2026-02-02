@@ -8,6 +8,7 @@
   config = lib.mkIf config.pkgsWm.enable {
     home.packages = with pkgs; [
       # light # enabled in configuration.nix
+      bluetui
       ddcutil
       dunst
       gammastep
@@ -19,6 +20,7 @@
       swayidle
       swaylock
       waybar
+      wiremix
       wl-clipboard
       wmenu
     ];
