@@ -19,7 +19,7 @@
       fzf
       htop
       nh
-      nnn
+      (nnn.override { withNerdIcons = true; })
       psmisc # provides killall
       ripgrep
       ruby_3_4
