@@ -26,6 +26,7 @@
       starship
       stow
       tealdeer
+      tmux
       tokei
       tree
       zoxide

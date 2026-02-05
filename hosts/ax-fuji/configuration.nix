@@ -31,7 +31,6 @@
       ripgrep
       starship
       stow
-      tmux
       tokei
       wget
       zoxide
