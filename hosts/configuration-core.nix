@@ -37,6 +37,7 @@
     vim
     wget
     ncdu
+    tmux
   ];
 
 
