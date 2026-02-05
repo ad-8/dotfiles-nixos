@@ -14,6 +14,7 @@
       gnome-disk-utility
       kdePackages.okular
       keepassxc
+      kitty
       libreoffice-still
       localsend
       mpv
